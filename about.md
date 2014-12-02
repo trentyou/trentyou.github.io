@@ -11,10 +11,6 @@ I have a B.S. in Neurobiology, Physiology and Behavior from the University of Ca
 
 After graduating college, I had second thoughts about my plan to go to medical school. I realized I was more passionate about writing code, and I decided to go back to school. I'm currently applying to second bachelor programs in Computer Science. 
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself. 
-
 ### Contact me
 
 [trentyou@gmail.com](mailto:trentyou@gmail.com)
