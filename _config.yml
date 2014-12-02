@@ -9,7 +9,7 @@ name:
 description: Hey I'm Trent! I recently graduated college with a degree in Biology but I decided to switch into Computer Science to follow my passions. I started programming in Objective-C about two months ago. Here's my blog about what I've learned and my thoughts on iOS development. 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/trentyou/trentyou.github.io/master/images/avatar.jpg
+avatar: #https://raw.githubusercontent.com/trentyou/trentyou.github.io/master/images/avatar.jpg
 
 # Flags below are optional
 #
