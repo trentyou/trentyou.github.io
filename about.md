@@ -5,7 +5,7 @@ permalink: /about/
 published: true
 ---
 
-![](/https://raw.githubusercontent.com/trentyou/trentyou.github.io/master/images/avatar.jpg)
+![](/images/avatar.jpg)
 
 My name is Trent You and I'm 23 years old. I grew up living in many different places around the world, though I spent most of it living in the Bay Area in California. At the moment I'm living in Morden, Manitoba in Canada.
 
