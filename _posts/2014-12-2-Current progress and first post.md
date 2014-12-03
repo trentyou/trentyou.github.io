@@ -16,13 +16,15 @@ It covers a broad enough area of the Xcode IDE, Cocoa Touch APIs and other frame
 Learning Objective-C was a huge challenge in the beginning. I had a very small amount of experience in Java from AP Computer Science that I had long forgot about, so that was no help. I also had a little bit of experience with the Ruby language, but I found out how difficult it was to do even the simplest things in Objective-C compared to Ruby. 
 I had a lot of trouble even logging things to the console! Apparently Objective-C (and C by extension) uses string format specifiers so you can't just type:
 
-int num = 5; \n
-NSLog(num);
+  int num = 5; 
+  
+  NSLog(num);
 
 You have to wrap it inside an NSString and format it correctly:
 
-int num = 5;
-NSLog(@"%lu", num);
+  int num = 5;
+  
+  NSLog(@"%lu", num);
 
 _WTF??_
 
