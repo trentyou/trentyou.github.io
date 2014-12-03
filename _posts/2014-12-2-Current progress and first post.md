@@ -11,7 +11,7 @@ Hey everyone! This blog is going to document how I, a recent graduate with a deg
 <div style="text-align:center" markdown="1">
 ![](/images/siliconvalley.jpg)
 </div>
-<div style="text-align:center; font-size: 0.9em">Where I want to be. Or anywhere I can get a job really. Please hire me.</div>
+<div style="text-align:center; font-size: 0.9em">Where I want to be. Or anywhere I can get a job really.</div>
 <br>
 
 So far I've been learning to program in Objective-C for almost 2 months as of today. I started teaching myself from the [Big Nerd Ranch iOS Programming book](http://www.amazon.com/iOS-Programming-Ranch-Guide-Edition/dp/0321942051), which by the way is a fantastic way to learn iOS programming. 
