@@ -22,7 +22,7 @@ No matter how I tweaked it, however, it would always end up looking like this:
 ![](/images/notworking_post2.gif)
 </div>
 <div style = "font-size: 0.8em">
-Notice how the bottom is animating but the frame of the view is never reaching a Height of 50.0f. It's almost as if it's spring animating to a Height of 0.0f instead!
+The condition for the view to appear is that the above timer is currently running. Notice how the bottom is animating but the frame of the view is never reaching a Height of 50.0f. It's almost as if it's spring animating to a Height of 0.0f instead!
 </div>
 
 
