@@ -18,12 +18,10 @@ When the condition was right, I wanted to pop up the frame from its invisible po
 
 No matter how I tweaked it, however, it would always end up looking like this:
 
-![](/images/notworking_post2.gif)
-
-<div style="text-align:center">
-
+<div style="text-align:center" markdown = "1">
 ![](/images/notworking_post2.gif)
 </div>
+
 Notice how the bottom is animating but the frame of the view is never reaching a Height of 50.0f. It's almost as if it's spring animating to a Height of 0.0f instead!
 
 
