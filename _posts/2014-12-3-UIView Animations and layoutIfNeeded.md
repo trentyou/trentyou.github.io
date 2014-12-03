@@ -22,7 +22,7 @@ No matter how I tweaked it, however, it would always end up looking like this:
 ![](/images/notworking_post2.gif)
 </div>
 <div style = "font-size: 0.8em">
-The condition for the view to appear is that the above timer is currently running. Notice how the bottom is animating but the frame of the view is never reaching a Height of 50.0f. It's almost as if it's spring animating to a Height of 0.0f instead!
+The condition for the view to appear is that the above timer is currently running. Notice how the bottom is animating but the frame of the view is never reaching a Height of 50.0f. It's almost as if it's spring animating to a Height of 0.0f instead.
 </div>
 
 
@@ -48,19 +48,4 @@ I don't understand it completely yet, but I'm guessing there were some pending l
 ![](/images/working_post2.gif)
 </div>
 
-The lesson here is - before you start your animation, make sure there aren't any pending layout operations! I placed this method in viewDidAppear: and I thought that all the subviews were already laid out, but I probably have a lot more to learn about view layouts at runtime. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The lesson here is - before you start your animation, make sure there aren't any pending layout operations! I placed this method in viewDidAppear: and I thought that all the subviews were already laid out, but I probably have a lot more to learn about view layouts at runtime.
