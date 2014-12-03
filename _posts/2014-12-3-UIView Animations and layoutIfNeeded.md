@@ -4,7 +4,7 @@ title: UIView Animations and layoutIfNeeded
 published: true
 ---
 
-<sub>12/3/2014</sub>
+<small>12/3/2014</small>
 
 I've been working on a feature for my app that involves a black transparent bar that pops up from the bottom of the screen when a certain condition is met. 
 
