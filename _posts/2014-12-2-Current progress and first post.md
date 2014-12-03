@@ -25,9 +25,8 @@ I had a lot of trouble even logging things to the console! Apparently Objective-
 
 You have to wrap it inside an NSString and format it correctly:
 
-> int num = 5;  
-
- > NSLog(@"%lu", num);
+> int num = 5;  <br>
+ NSLog(@"%lu", num);
  
 
 
