@@ -20,7 +20,7 @@ So far I've been learning to program in Objective-C for almost 2 months as of to
 ![Big Nerd Ranch](http://ecx.images-amazon.com/images/I/41P0EvzUQXL.jpg)
 </div>
 
-It covers a broad enough area of the Xcode IDE, Cocoa Touch APIs and other frameworks so that you have all the basics you need to start writing your own app. (Here's some free advertisement for you guys for writing a great book!). Also, thanks to my friend Kevin who introduced me the book!
+It covers a broad enough area of the Xcode IDE, Cocoa Touch APIs and other frameworks so that you have all the basics you need to start writing your own app. (Here's some free advertisement for you guys for writing a great book). Also, thanks to my friend Kevin who introduced me this book!
 
 
 Learning Objective-C was a huge challenge in the beginning. I had a very small amount of experience in Java from AP Computer Science that I had long forgot about, so that was no help. I also had a little bit of experience with the Ruby language, but I found out how difficult it was to do even the simplest things in Objective-C compared to Ruby. 
