@@ -1,6 +1,6 @@
 ---
 layout: post
-title: my current progress and first post
+title: My Current Progress and First Post
 published: true
 ---
 
