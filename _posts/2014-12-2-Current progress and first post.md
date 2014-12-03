@@ -5,7 +5,6 @@ published: true
 ---
 
 <div style="font-size: 1.3 em">12/2/2014</div>
-<br>
 
 Hey everyone! This blog is going to document how I, a recent graduate with a degree in biology, will try to enter the programming industry. I'm going to be writing about the challenges I encounter trying to learn programming, find internships/co-ops and eventually land a job. As of right now I'm applying to second bachelor programs in Computer Science with the intent of entering school in Fall 2015. 
 
