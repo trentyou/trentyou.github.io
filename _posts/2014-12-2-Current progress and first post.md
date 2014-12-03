@@ -11,7 +11,7 @@ Hey everyone! This blog is going to document how I, a recent graduate with a deg
 <div style="text-align:center" markdown="1">
 ![](/images/siliconvalley.jpg)
 </div>
-<div style="font-size: 0.9em">Where I want to be</div>
+<div style="text-align:center font-size: 0.9em">Where I want to be</div>
 
 
 
