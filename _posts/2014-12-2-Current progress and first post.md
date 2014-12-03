@@ -33,14 +33,17 @@ You have to wrap it inside an NSString and format it correctly:
 Other challenges were reading and writing the insanely long method names. It felt like I literally had to write an essay to do something that it took one short line in another language.
 
 Ruby:
+
 > array1 = array2
 
 Objective-C
+
 > NSArray *array1 = [NSArray arrayWithArray:array2];
 
 
 
 Not even counting the method names like:
+
 > (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 _Yeeaaah_
