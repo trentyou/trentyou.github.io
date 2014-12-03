@@ -27,8 +27,10 @@ The condition for the view to appear is that the above timer is currently runnin
 
 
 (By the way, this is a preview of the app I'm currently building called CodeCalendar - real name TBA)
+
 <br>
 I was positive that my math was correct and I didn't accidentally use the origin of the view where I should have used the height. The constraints weren't incorrectly placed (with or without a vertical constraint on the view it still didn't work). I spent hours on this problem and nothing made sense! 
+
 <br>
 Eventually I checked Stackoverflow to see if there was anyone else with my problem and I found an interesting post in which someone asked about animating changes to constraints. The person who answered quoted Apple's recommendation that **you should send a message to the parent view to layoutIfNeeded within the animation block before you begin any frame changes so that any pending layout operations will immediately complete.**
 
