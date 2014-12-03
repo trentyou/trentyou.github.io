@@ -36,7 +36,7 @@ Eventually I checked Stackoverflow to see if there was anyone else with my probl
 
 > [UIView animateWithDuration:1.0 animations:^{
 >
->	<b>[parentView layoutIfNeeded]</b>
+>	<strong>[parentView layoutIfNeeded]</strong>
 >    
 >    // Change your frame to the new frame
 >    
