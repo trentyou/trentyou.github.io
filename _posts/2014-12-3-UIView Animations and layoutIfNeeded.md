@@ -36,8 +36,31 @@ Eventually I checked Stackoverflow to see if there was anyone else with my probl
 
 > [UIView animateWithDuration:1.0 animations:^{
 >
->	<strong>[parentView layoutIfNeeded]</strong>
+>	[parentView layoutIfNeeded]
 >    
 >    // Change your frame to the new frame
 >    
 >}];
+
+I don't understand it completely yet, but I'm guessing there were some pending layout operations that were overriding my frame change to the view. I added the above code to my animate method and now it works perfectly!
+
+<div style="text-align:center" markdown="1">
+![](//images/working_post2.gif)
+</div>
+
+The lesson here is - before you start your animation, make sure there aren't any pending layout operations! I placed this method in viewDidAppear: and I thought that all the subviews were already layed out, but I probably have a lot more to learn about view layouts at runtime. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
