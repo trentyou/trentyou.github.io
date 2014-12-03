@@ -48,7 +48,7 @@ Not even counting the method names like:
 
 _Yeeaaah_
 
-Overall though, it's been really rewarding learning mobile programming. You can immediately see your work  It combines a bit of backend, frontend and UI design into one role and it's easy to see your work 
+Overall though, it's been really rewarding learning mobile programming. You can immediately see your work shown on the screen whether you're using the simulator or testing on your own device. I feel like mobile programming combines a bit of backend, frontend and UI design into one role and lets you try a little bit of everything. 
 
 
 
