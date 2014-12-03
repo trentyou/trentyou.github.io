@@ -21,6 +21,7 @@ Learning Objective-C was a huge challenge in the beginning. I had a very small a
 I had a lot of trouble even logging things to the console! Apparently Objective-C (and C by extension) uses string format specifiers so you can't just type:
 
 > int num = 5; 
+
   NSLog(num);
 
 You have to wrap it inside an NSString and format it correctly:
