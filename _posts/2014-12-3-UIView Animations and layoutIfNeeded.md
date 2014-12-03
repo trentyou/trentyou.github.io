@@ -12,7 +12,7 @@ The way I implemented this feature was to create a UIView at the bottom of the s
 
 When the condition was right, I wanted to pop up the frame from its invisible position at the bottom. To do this I set the frame of the view to have a Height = 50.0f, and also adjusted the origin.y of the frame to origin.y - 50.0f. I achieved this transition with a spring animation. 
 
-> animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion
+> animateWithDuration: delay: usingSpringWithDamping: initialSpringVelocity: options: animations: completion
 
 
 
