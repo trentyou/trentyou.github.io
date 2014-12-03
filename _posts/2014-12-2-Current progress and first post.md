@@ -48,7 +48,7 @@ Objective-C
 
 
 
-Not even counting the method names like:
+Not even gonna mention this monstrosity:
 
 > (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
