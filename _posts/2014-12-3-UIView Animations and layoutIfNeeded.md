@@ -21,7 +21,6 @@ No matter how I tweaked it, however, it would always end up looking like this:
 <div style="text-align:center" markdown = "1">
 ![](/images/notworking_post2.gif)
 </div>
-
 Notice how the bottom is animating but the frame of the view is never reaching a Height of 50.0f. It's almost as if it's spring animating to a Height of 0.0f instead!
 
 
