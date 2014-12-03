@@ -18,9 +18,9 @@ When the condition was right, I wanted to pop up the frame from its invisible po
 
 No matter how I tweaked it, however, it would always end up looking like this:
 
+![](/images/notworking_post2.gif)
 
 <div style="text-align:center">
-![](http://raw.githubusercontent.com/trentyou/trentyou.github.io/master/images/notworking_post2.gif)
 
 ![](/images/notworking_post2.gif)
 </div>
@@ -28,6 +28,8 @@ Notice how the bottom is animating but the frame of the view is never reaching a
 
 
 (By the way, this is a preview of the app I'm currently building called CodeCalendar - real name TBA)
+
+
 
 I was positive that my math was correct and I didn't accidentally use the origin of the view where I should have used the height. The constraints weren't incorrectly placed (with or without a vertical constraint on the view it still didn't work). I spent hours on this problem and nothing made sense! 
 
