@@ -49,7 +49,7 @@ Objective-C
 
 
 
-Not even gonna mention this monstrosity:
+Don't even wanna mention this monstrosity:
 
 > (void)animateWithDuration:(NSTimeInterval)duration
                       delay:(NSTimeInterval)delay
