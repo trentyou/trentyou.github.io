@@ -4,6 +4,8 @@ title: my current progress and first post
 published: true
 ---
 
+_12/2/2014_
+
 Hey everyone! This blog is going to document how I, a recent graduate with a degree in biology, will try to enter the programming industry. I'm going to be writing about the challenges I encounter trying to learn programming, find internships/co-ops and eventually land a job. As of right now I'm applying to second bachelor programs in Computer Science with the intent of entering school in Fall 2015. 
 
 So far I've been learning to program in Objective-C for almost 2 months as of today. I started teaching myself from the [Big Nerd Ranch iOS Programming book](http://www.amazon.com/iOS-Programming-Ranch-Guide-Edition/dp/0321942051), which by the way is a fantastic way to learn iOS programming. 
@@ -15,20 +17,57 @@ It covers a broad enough area of the Xcode IDE, Cocoa Touch APIs and other frame
 
 Learning Objective-C was a huge challenge in the beginning. I had a very small amount of experience in Java from AP Computer Science that I had long forgot about, so that was no help. I also had a little bit of experience with the Ruby language, but I found out how difficult it was to do even the simplest things in Objective-C compared to Ruby. 
 I had a lot of trouble even logging things to the console! Apparently Objective-C (and C by extension) uses string format specifiers so you can't just type:
+> int num = 5; 
 
-  int num = 5; 
-  
-  NSLog(num);
+> NSLog(num);
 
 You have to wrap it inside an NSString and format it correctly:
 
-  int num = 5;
-  
-  NSLog(@"%lu", num);
+> int num = 5;  
 
-_WTF??_
+ > NSLog(@"%lu", num);
+ 
 
-Other challenges were reading and writing the insanely long method names. It felt like I literally had to write an essay to do something that it took one short line in another language. 
+
+Other challenges were reading and writing the insanely long method names. It felt like I literally had to write an essay to do something that it took one short line in another language.
+
+Ruby:
+> array1 = array2
+
+Objective-C
+> NSArray *array1 = [NSArray arrayWithArray:array2];
+
+
+
+Not even counting the method names like:
+> (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+_Yeeaaah_
+
+Overall though, it's been really rewarding learning mobile programming. You can immediately see your work  It combines a bit of backend, frontend and UI design into one role and it's easy to see your work 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
