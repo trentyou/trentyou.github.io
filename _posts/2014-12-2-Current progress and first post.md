@@ -50,6 +50,8 @@ _Yeeaaah_
 
 Overall though, it's been really rewarding learning mobile programming. You can immediately see your work shown on the screen whether you're using the simulator or testing on your own device. I feel like mobile programming combines a bit of backend, frontend and UI design into one role and lets you try a little bit of everything. 
 
+I'm currently working on my first app, which is a journal that tracks the time you spent coding. I'll be updating this blog frequently on my progress, interesting challenges I encounter and maybe even tutorials on cool tricks I've learned to do. 
+
 
 
 
