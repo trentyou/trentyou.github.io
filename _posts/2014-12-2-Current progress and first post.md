@@ -53,7 +53,7 @@ Not even counting the method names like:
 
 _Yeeaaah_
 
-One upside I guess is that you can be _reeally_ specific when naming your methods and variables!
+One upside I guess is that you can be _really_ specific when naming your methods and variables!
 
 Overall though, it's been really rewarding to learn mobile programming. You can immediately see your work shown on the screen whether you're using the simulator or testing on your own device. I feel like mobile programming combines a bit of backend, frontend and UI design into one role and lets you try a little bit of everything. 
 
