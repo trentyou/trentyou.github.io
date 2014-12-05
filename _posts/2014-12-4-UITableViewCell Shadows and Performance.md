@@ -9,7 +9,7 @@ published: true
 Today I've been working on implementing drop shadows in my UITableViewCells. In my opinion, adding a drop shadow adds a certain level of depth to your tableview:
 
 <div style="float:left; display:inline-block; width:40%; height:40%" markdown="1">
-	![](/images/screenshotwithoutshadows_post3.png)
+![](/images/screenshotwithoutshadows_post3.png)
 </div>
 
 <div style="float:right; width:40%; height:40%" markdown="1">
@@ -43,7 +43,7 @@ To add these shadows, I initially included a few lines of code to cellForRowAtIn
 While it did add shadows to my UITableViewCells, one issue became apparent immediately:
 
 <div style="text-align:center" markdown="1">
-![](/images/shadownotworking_post3)
+![](/images/shadownotworking_post3.gif)
 </div>
 
 
