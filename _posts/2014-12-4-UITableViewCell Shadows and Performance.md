@@ -4,7 +4,7 @@ title: UITableViewCell Shadows and Performance
 published: true
 ---
 
-12/5/2014
+12/4/2014
 
 Today I've been working on implementing drop shadows in my UITableViewCells. In my opinion, adding a drop shadow makes your tableview look much better! In addition, it adds the illusion of depth:
 
@@ -101,3 +101,5 @@ You can remove the shadow properties using:
 It's important to remove the shadow properties each time if the cell isn't the last row of the section because the tableview is dynamically changing as the user scrolls. I'm not entirely sure how the tableview calculates it, but the actual last row of the section might not be considered the last row by the system if it isn't within the user's view. You might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
 
 After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps.
+
+
