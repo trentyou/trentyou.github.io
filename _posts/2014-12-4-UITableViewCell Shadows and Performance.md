@@ -44,13 +44,13 @@ Today I've been working on implementing drop shadows in my UITableViewCells. In 
 <br>
 
 <div style="font-size:0.9em; text-align:center">
-Table views with and without shadows.
+Tableviews with and without shadows.
 </div>
 </div>
 
 <br>
 
-To add these shadows, I initially included a few lines of code to cellForRowAtIndexPath:
+To add these shadows, I initially included a few lines of code to cellForRowAtIndexPath: for each cell.
 
 >cell.layer.shadowColor = [UIColor blackColor].CGColor; <br>
 >cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f); <br>
@@ -66,6 +66,11 @@ While it did add shadows to my UITableViewCells, one issue became apparent immed
 Notice the section that lists names of programming languages. It appears as though each cell is attempting to project a shadow onto the cell below it. 
 </div>
 
+I'm guessing each time the user scrolls and cellForRowAtIndexPath: is called, the shadow positions need to change to reflect the new view that the user is seeing. It creates a number of glitches when scrolling back to the original view position.
+
+Another big issue with this approach is a _very_ noticable drop in performance. It may a little be hard to see on the simulator, but on my iPhone 5 the app stutters in a huge way, with the frame rate dropping to about 15-20 fps. 
+
+I wasn't sure whether it was because my phone is slightly aging (the iPhone 5 came out in 2012), or whether my code was really inefficient. 
 
 
 
