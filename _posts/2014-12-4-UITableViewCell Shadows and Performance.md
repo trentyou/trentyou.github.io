@@ -42,8 +42,6 @@ Today I've been working on implementing drop shadows in my UITableViewCells. In 
 <br>
 <br>
 <br>
-<br>
-<br>
 
 <div style="font-size:1.0em; text-align:center">
 Table views with and without shadows.
