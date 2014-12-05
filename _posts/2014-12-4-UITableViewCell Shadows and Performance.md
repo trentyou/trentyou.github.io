@@ -51,10 +51,10 @@ Table views with and without shadows.
 
 To add these shadows, I initially included a few lines of code to cellForRowAtIndexPath:
 
->cell.layer.shadowColor = [UIColor blackColor].CGColor; <br></br>
->cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f); <br></br>
->cell.layer.shadowOpacity = 0.2f; <br></br>
->cell.layer.shadowRadius = 2.0f; <br></br>
+>cell.layer.shadowColor = [UIColor blackColor].CGColor; <br>
+>cell.layer.shadowOffset = CGSizeMake(0.0f, 2.0f); <br>
+>cell.layer.shadowOpacity = 0.2f; <br>
+>cell.layer.shadowRadius = 2.0f; <br>
 
 While it did add shadows to my UITableViewCells, one issue became apparent immediately:
 
