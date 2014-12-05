@@ -72,6 +72,26 @@ Another big issue with this approach is a _very_ noticable drop in performance. 
 
 I wasn't sure whether it was because my phone is slightly aging (the iPhone 5 came out in 2012), or whether my code was really inefficient. 
 
+I looked online and found this post:
+http://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/
+
+I realized that the fix was actually really simple. We need to give Core Animation a set frame of the shadow by calling:
+
+>[cell.layer setShadowPath:[UIBezierPath bezierPathWithRect:cell.bounds].CGPath];
+
+I think it's possible that Core Animation was attempting to calculate the shadow frames on the fly as the user scrolled through the tableview, and it must have been a huge hit on CPU performance. 
+
+While this solves the performance issue, the glitching in shadows for sections with more than one cell was still occurring. To solve this I came up with my own solution:
+Since only the last cell in a section is supposed to display a shadow anyway, check if each cell is the last row in a section:
+
+> if(indexPath.row == lastRowOfYourSection) {
+> //add the shadow properties
+> } else {
+> //remove the shadow properties
+>}
+
+
+
 
 
 
