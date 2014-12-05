@@ -94,21 +94,10 @@ Since only the last cell in a section is supposed to display a shadow anyway, ch
 > //remove the shadow properties <br>
 >}
 
-Make sure to remove the shadow properties by setting 
+You can remove the shadow properties using:
 
 > cell.layer.shadowOpacity = 0.0f;
 
-Since the tableview is dynamically changing as the user scrolls, you might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
+It's important to remove the shadow properties each time if the cell isn't the last row of the section because the tableview is dynamically changing as the user scrolls. I'm not entirely sure how the tableview calculates it, but the actual last row of the section might not be considered the last row by the system if it isn't within the user's view. You might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
 
-After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps. 
-
-
-
-
-
-
-
-
-
-
-
+After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps.
