@@ -27,6 +27,29 @@ Today I've been working on implementing drop shadows in my UITableViewCells. In 
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
 
@@ -36,7 +59,7 @@ Table views with and without shadows.
 </div>
 </div>
 
-<br></br>
+<br>
 
 To add these shadows, I initially included a few lines of code to cellForRowAtIndexPath:
 
