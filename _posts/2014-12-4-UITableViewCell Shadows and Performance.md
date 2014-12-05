@@ -71,6 +71,7 @@ I'm guessing each time the user scrolls and cellForRowAtIndexPath: is called, th
 Another big issue with this approach is a _very_ noticable drop in performance. It may a little be hard to see on the simulator, but on my iPhone 5 the app stutters in a huge way, with the frame rate dropping to about 15-20 fps. 
 
 I wasn't sure whether it was because my phone is slightly aging (the iPhone 5 came out in 2012), or whether my code was really inefficient so I looked online and found this post:
+
 http://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/
 
 I realized that the fix was actually really simple. We need to give Core Animation a set frame of the shadow by calling:
