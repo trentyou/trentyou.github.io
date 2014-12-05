@@ -96,7 +96,7 @@ Make sure to remove the shadow properties by setting
 
 Since the tableview is dynamically changing as the user scrolls, you might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
 
-After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps now. 
+After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps. 
 
 
 
