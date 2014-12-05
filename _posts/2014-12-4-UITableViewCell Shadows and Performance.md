@@ -8,7 +8,7 @@ published: true
 
 Today I've been working on implementing drop shadows in my UITableViewCells. In my opinion, adding a drop shadow adds a certain level of depth to your tableview:
 
-<div style="max-width: 40%; max-height: 40%" markdown="1">
+<div style="text-align:center; width: 40%; height: 40%" markdown="1">
 	![](/images/screenshotwithoutshadows_post3.png)
 </div>
 <div style="font-size: 1.0em; text-align:center">
