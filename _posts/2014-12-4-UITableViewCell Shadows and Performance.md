@@ -90,6 +90,10 @@ Since only the last cell in a section is supposed to display a shadow anyway, ch
 > //remove the shadow properties <br>
 >}
 
+Make sure to remove the shadow properties by setting 
+> cell.layer.shadowOpacity = 0.0f;
+
+Since the tableview is dynamically changing as the user scrolls, you might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
 
 
 
