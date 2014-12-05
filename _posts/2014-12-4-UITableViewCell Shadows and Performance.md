@@ -8,13 +8,26 @@ published: true
 
 Today I've been working on implementing drop shadows in my UITableViewCells. In my opinion, adding a drop shadow makes your tableview look much better! In addition, it adds the illusion of depth:
 <div>
-<div style="float:left; display:inline-block; width:40%; height:40%" markdown="1">
+<div style="float:left; width:40%; height:40%" markdown="1">
 ![](/images/screenshotwithoutshadows_post3.png)
 </div>
 
 <div style="float:right; width:40%; height:40%" markdown="1">
 ![](/images/screenshotwithshadow_post3.png)
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
 
