@@ -61,7 +61,9 @@ While it did add shadows to my UITableViewCells, one issue became apparent immed
 <div style="text-align:center" markdown="1">
 ![](/images/shadownotworking_post3.gif)
 </div>
-
+<div style="font-size:0.9em; text-align:center">
+Notice the section that lists names of programming languages. It appears as though each cell is attempting to project a shadow onto the cell below it. 
+</div>
 
 
 
