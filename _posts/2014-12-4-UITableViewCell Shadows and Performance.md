@@ -70,9 +70,7 @@ I'm guessing each time the user scrolls and cellForRowAtIndexPath: is called, th
 
 Another big issue with this approach is a _very_ noticable drop in performance. It may a little be hard to see on the simulator, but on my iPhone 5 the app stutters in a huge way, with the frame rate dropping to about 15-20 fps. 
 
-I wasn't sure whether it was because my phone is slightly aging (the iPhone 5 came out in 2012), or whether my code was really inefficient. 
-
-I looked online and found this post:
+I wasn't sure whether it was because my phone is slightly aging (the iPhone 5 came out in 2012), or whether my code was really inefficient so I looked online and found this post:
 http://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/
 
 I realized that the fix was actually really simple. We need to give Core Animation a set frame of the shadow by calling:
@@ -80,6 +78,7 @@ I realized that the fix was actually really simple. We need to give Core Animati
 >[cell.layer setShadowPath:[UIBezierPath bezierPathWithRect:cell.bounds].CGPath];
 
 I think it's possible that Core Animation was attempting to calculate the shadow frames on the fly as the user scrolled through the tableview, and it must have been a huge hit on CPU performance. 
+Though this removes the ability of Core Animation to dynamically change shadows to changes in the frame of the cell, it's not quite an issue with tableviews since the UITableViewCells rarely change their frame.
 
 While this solves the performance issue, the glitching in shadows for sections with more than one cell was still occurring. To solve this I came up with my own solution:
 Since only the last cell in a section is supposed to display a shadow anyway, check if each cell is the last row in a section:
@@ -96,6 +95,7 @@ Make sure to remove the shadow properties by setting
 
 Since the tableview is dynamically changing as the user scrolls, you might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
 
+After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps now. 
 
 
 
