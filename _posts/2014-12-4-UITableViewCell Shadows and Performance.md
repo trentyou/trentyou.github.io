@@ -84,10 +84,10 @@ I think it's possible that Core Animation was attempting to calculate the shadow
 While this solves the performance issue, the glitching in shadows for sections with more than one cell was still occurring. To solve this I came up with my own solution:
 Since only the last cell in a section is supposed to display a shadow anyway, check if each cell is the last row in a section:
 
-> if(indexPath.row == lastRowOfYourSection) {
-> //add the shadow properties
-> } else {
-> //remove the shadow properties
+> if(indexPath.row == lastRowOfYourSection) { <br>
+> //add the shadow properties <br>
+> } else { <br>
+> //remove the shadow properties <br>
 >}
 
 
