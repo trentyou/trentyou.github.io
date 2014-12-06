@@ -76,7 +76,7 @@ Another big issue with this approach is a _very_ noticable drop in performance. 
 
 I wasn't sure whether it was because my phone is slightly aging (the iPhone 5 came out in 2012), or whether my code was really inefficient so I looked online and found this post:
 
-http://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/
+[http://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/](http://markpospesel.wordpress.com/2012/04/03/on-the-importance-of-setting-shadowpath/)
 
 I realized that the fix was actually really simple. We need to give Core Animation a set frame of the shadow by calling:
 
@@ -98,8 +98,6 @@ You can remove the shadow properties using:
 
 > cell.layer.shadowOpacity = 0.0f;
 
-It's important to remove the shadow properties each time if the cell isn't the last row of the section because the tableview is dynamically changing as the user scrolls. I'm not entirely sure how the tableview calculates it, but the actual last row of the section might not be considered the last row by the system if it isn't within the user's view. You might end up with some problems in which an earlier cell in the section is retaining the shadow properties when it isn't supposed to. 
+It's important to remove the shadow properties each time if the cell isn't the last row of the section because the tableview is dynamically changing as the user scrolls. I'm not entirely sure how the tableview calculates it, but the actual last row of the section might not be considered the last row by the system if it isn't within the user's view. You might end up with some problems in which an earlier cell in the section is retaining the shadow properties it isn't supposed to. 
 
 After implementing these fixes, my tableview is incredibly smooth now! I can't screen capture a gif on my iPhone 5, but it's definitely scrolling at 60 fps.
-
-
