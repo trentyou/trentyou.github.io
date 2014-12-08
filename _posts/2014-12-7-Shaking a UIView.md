@@ -48,7 +48,7 @@ Here is my implementation of the shake animation:
 
 <br>
 
-I know it's difficult to see this on the simulator since I was recording at 30 fps, but I think it looks nice when testing on an actual device.
+I know it's difficult to see this on the simulator since I was recording at 30 fps, but it looks really nice when testing on an actual device.
 
 What's happening in this demonstration is that when the user has the "Select a language" row selected, pressing the "Done" button will shake the UIView and not allow the user to proceed to the next prompt. As you can see later in the gif, when the user has selected a valid row, the app will allow the user to move on.
 
