@@ -91,7 +91,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
               viewToShake.frame = shakeFrameRight; <br>
   
           }]; <br>
-  
+  <br>
       }completion:^(BOOL finished) { <br>
           viewToShake.frame = self.defaultFrame; <br> 
       }]; <br>
