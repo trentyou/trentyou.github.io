@@ -205,7 +205,7 @@ To call this method, we type:
 <code>
 [UIView animateKeyframesWithDuration: delay: options: animations:^{
 } completion:^(BOOL finished)completion {
-}]
+}];
 </code>
 </div>
 <br>
@@ -218,7 +218,7 @@ float duration = 0.06; <br>
 <br>
 [UIView animateKeyframesWithDuration:duration delay: options: animations:^{
 } completion:^(BOOL finished)completion {
-}
+}];
 </code>
 </div>
 
@@ -230,14 +230,20 @@ float duration = 0.06; <br>
 <br>
 [UIView animateKeyframesWithDuration:duration delay:0.0 options: animations:^{
 } completion:^(BOOL finished)completion {
-}
+}];
 </code>
+</div>
 <br>
 
 The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is quite extensive, but we only need two of them for this example: 
 
+
 UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut
 
+
+UIViewKeyFrameAnimationOptionRepeat just repeats the animation indefinitely unless you specify an animation repeat count. 
+
+UIViewAnimationOptionCurveEaseInOut
 
 
 
