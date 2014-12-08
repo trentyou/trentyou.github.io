@@ -54,7 +54,6 @@ Now to the part of the post you've been reading for, here's my code for the impl
 <code>
 
 	(void)animateShake:(UIView *)viewToShake
- 
 	{
     float duration = 0.06;
     float offset = 5.0;
