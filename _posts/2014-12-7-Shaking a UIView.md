@@ -67,13 +67,14 @@ Now to the part of the post you've been reading for, here's my code for the impl
       float duration = 0.06; <br>
       float offset = 5.0; <br>
       float repeatCount = 3.0; <br>
+      <br>
   
       CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); <br>
   
       CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); <br>
-  
+  <br>
       viewToShake.frame = shakeFrameRight; <br>
-  
+<br>  
       [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ <br>
   
           [UIView setAnimationRepeatCount:repeatCount]; <br>
