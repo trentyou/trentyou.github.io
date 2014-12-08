@@ -295,11 +295,17 @@ viewToShake.frame = shakeFrameLeft; <br>
 </code>
 </div>
 
-This is getting a little crazy, but inside our animation block, we have another method that takes an animation block as a parameter. Inside this nested animation block is where we specify our first animation. By entering 
+This is getting a little crazy, but inside our animation block, we have another method that takes an animation block as a parameter. Inside this nested animation block is where we specify our first animation. By typing:
 
+<div style = "width:700px">
+<code>
 viewToShake.frame = shakeFrameLeft;
+</code>
+</div>
 
-We're telling UIView that we want to take the current frame of viewToShake and animate it to shakeFrameLeft. The other parameter 
+We're telling UIView that we want to take the current frame of viewToShake and animate it to shakeFrameLeft. 
+
+The other parameter 
 
 <div style = "width:700px">
 <code>
@@ -315,10 +321,63 @@ represents when during the total animation time you want this animation to start
 </code>
 </div>
 
-This parameter means that 
+This next parameter specifies how long of the total animation time this keyframe will spend. 0.5 means that half of the total animation time will be spent animating to this keyframe.
 
 
+Now we're going to add our second keyframe, which is basically the same code as our first keyframe, except that we're animating to the right this time. 
 
+
+<div style = "width:700px">
+<code>
+animations:^{ <br>
+[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
+viewToShake.frame = shakeFrameLeft; <br>
+<br>
+[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+viewToShake.frame = shakeFrameLeft; <br>
+}]; 
+}
+</code>
+</div>
+
+Note the different RelativeStartTime for the second keyframe. It's going to be starting after the first keyframe ends. 
+
+Finally, we're going to specify the repeat count of this overall animation, otherwise it'll just repeat forever.
+
+<div style = "width:700px">
+<code>
+float repeatCount = 3.0;<br>
+<br>
+---- <br>
+<br>
+animations:^{ <br>
+
+[UIView setAnimationRepeatCount:repeatCount]; <br>
+
+[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
+viewToShake.frame = shakeFrameLeft; <br>
+<br>
+[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+viewToShake.frame = shakeFrameLeft; <br>
+}
+}
+</code>
+</div>
+
+
+We're done with the animation block! The final parameter in the addKeyFramesWithDuration method is another block. It asks what you want to do after the animation is complete. We're going to reset our viewToShake frame back to the defaultFrame.
+
+<div style = "width:700px">
+<code>
+      }completion:^(BOOL finished) { <br>
+          viewToShake.frame = self.defaultFrame; <br> 
+      }]; <br>
+</code>
+</div>
+
+You're done! If any of the code isn't working for you, check with the first code snippet I posted that includes all the code I talked about. 
+
+You can mess around with the offset, the duration and 
 
 
 
