@@ -376,7 +376,9 @@ viewToShake.frame = shakeFrameRight; <br>
 </div>
 
 
-We're done with the animation block! The final parameter in the addKeyFramesWithDuration method is another block. It asks what you want to do after the animation is complete. We're going to reset our viewToShake frame back to the defaultFrame.
+We're done with the animation block! 
+
+The final parameter in the addKeyFramesWithDuration method is another block. It asks what you want to do after the animation is complete. We're going to reset our viewToShake frame back to the defaultFrame.
 
 <div style = "width:700px">
 <code>
