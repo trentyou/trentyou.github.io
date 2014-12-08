@@ -53,9 +53,9 @@ Now to the part of the post you've been reading for, here's my code for the impl
 
 <code>
 
- (void)animateShake:(UIView *)viewToShake
+	(void)animateShake:(UIView *)viewToShake
  
-{
+	{
     float duration = 0.06;
     float offset = 5.0;
     float repeatCount = 3.0;
@@ -64,7 +64,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
 
     CGRect shakeFrameLeft = CGRectMake(self.animatedFrame.origin.x - offset, self.animatedFrame.origin.y, self.animatedFrame.size.width, self.animatedFrame.size.height);
 
-viewToShake.frame = shakeFrameRight;
+	viewToShake.frame = shakeFrameRight;
 
     [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
 
