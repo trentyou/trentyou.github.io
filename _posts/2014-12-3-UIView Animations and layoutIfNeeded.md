@@ -48,4 +48,4 @@ I don't understand it completely yet, but I'm guessing there were some pending l
 ![](/images/working_post2.gif)
 </div>
 
-The lesson here is - before you start your animation, make sure there aren't any pending layout operations! I placed this method in viewDidAppear: and I thought that all the subviews were already laid out, but I probably have a lot more to learn about view layouts at runtime.
+The lesson here is - before you start your animation, force any pending layout operations to immediately complete. I placed this method in viewDidAppear: and I thought that all the subviews were already laid out, but I probably have a lot more to learn about view layouts at runtime.
