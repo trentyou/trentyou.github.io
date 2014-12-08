@@ -55,13 +55,17 @@ Now to the part of the post you've been reading for, here's my code for the impl
 
 	(void)animateShake:(UIView *)viewToShake
 	{
+    // Configuring the default frame. This is the frame of your view before the shake animation
+     CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f;
+     self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);
+    
     float duration = 0.06;
     float offset = 5.0;
     float repeatCount = 3.0;
 
-    CGRect shakeFrameRight = CGRectMake(self.animatedFrame.origin.x + offset, self.animatedFrame.origin.y, self.animatedFrame.size.width, self.animatedFrame.size.height);
+    CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 
-    CGRect shakeFrameLeft = CGRectMake(self.animatedFrame.origin.x - offset, self.animatedFrame.origin.y, self.animatedFrame.size.width, self.animatedFrame.size.height);
+    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 
 	viewToShake.frame = shakeFrameRight;
 
@@ -82,7 +86,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
         }];
 
     }completion:^(BOOL finished) {
-        viewToShake.frame = self.animatedFrame;
+        viewToShake.frame = self.defaultFrame;
     }];
 
 }
