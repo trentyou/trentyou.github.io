@@ -272,7 +272,15 @@ viewToShake.frame = shakeFrameLeft; <br>
 </code>
 </div>
 
-This is getting a little crazy, but inside our animation block, we have another method that takes an animation block as a parameter. Inside this nested animation block is where we put what we want our first animation to be. We want our 
+This is getting a little crazy, but inside our animation block, we have another method that takes an animation block as a parameter. Inside this nested animation block is where we specify our first animation. By entering 
+
+viewToShake.frame = shakeFrameLeft;
+
+We're telling UIView that we want to take the current frame of viewToShake and animate it to shakeFrameLeft. The other parameters 
+
+addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5
+
+
 
 
 
