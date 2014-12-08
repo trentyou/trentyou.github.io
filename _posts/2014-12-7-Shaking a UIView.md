@@ -185,13 +185,13 @@ Now that we have the two frames that we'll be animating between, let's dive into
 </div>
 
 UIView has class methods that animate views for you. The class method we're using is 
-
-+ (void)animateKeyframesWithDuration:(NSTimeInterval)duration
+<code>
+(void)animateKeyframesWithDuration:(NSTimeInterval)duration
                                delay:(NSTimeInterval)delay
                              options:(UIViewKeyframeAnimationOptions)options
                           animations:(void (^)(void))animations
                           completion:(void (^)(BOOL finished))completion
-
+</code>
 
 
 
