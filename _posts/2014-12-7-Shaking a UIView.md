@@ -157,7 +157,7 @@ Next, we do the same thing by defining shakeFrameLeft
 This time, instead of adding the offset to the origin.x of the frame, we subtract it, since in the iOS view coordinate system, subtracting from the origin.x moves left in the view and adding to the origin.x moves right. 
 <br>
 
-Now that we have the two frames that we'll be animating between, let's dive into the animation method. This is going to look a lot more intimidating than it really is (in part due to my bad HTML formatting skills), but don't worry, I'm going to describe every portion of the code.
+Now that we have the two frames that we'll be animating between, let's dive into the animation method. This is going to look a lot more intimidating than it really is (in part due to my bad HTML formatting skills), but don't worry, I'm going to describe every portion of this code.
 
 <div style = "width:700px">
 <code>
@@ -188,7 +188,7 @@ Now that we have the two frames that we'll be animating between, let's dive into
 
 UIView has class methods that animate views for you. The class method we're using is 
 <code>
-(void)animateKeyframesWithDuration:(NSTimeInterval)duration
++(void)animateKeyframesWithDuration:(NSTimeInterval)duration
                                delay:(NSTimeInterval)delay
                              options:(UIViewKeyframeAnimationOptions)options
                           animations:(void (^)(void))animations
