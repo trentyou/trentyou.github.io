@@ -52,6 +52,7 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 Now to the part of the post you've been reading for, here's my code for the implementation:
 
+<div style="word-wrap:break-word">
 <code>
 
 	(void)animateShake:(UIView *)viewToShake
@@ -93,6 +94,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
 
 	}
     
+</div>
 
 If you're not familiar with UIView animations, I would first suggest reading [this](http://code.tutsplus.com/tutorials/ios-sdk-uiview-animations--mobile-10706) tutorial. Basically, however, UIView animations are a very easy way to animate the following properties of a UIView: 
 
@@ -104,7 +106,10 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 - Background Color
 - contentStretch
 
-We're only going to worry about the frame in this example. What we're doing in a nutshell is animating the frame of the viewToShake by moving it _slightly_ to the left, and then animating it _slightly_ to the right. We're going to be doing this very fast
+We're only going to worry about the frame in this example. What we're doing in a nutshell is animating the frame of the viewToShake by moving it _slightly_ to the left, and then animating it _slightly_ to the right. We're going to be doing this very fast.
+
+
+
 
 
 
