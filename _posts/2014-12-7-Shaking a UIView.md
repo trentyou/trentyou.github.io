@@ -8,6 +8,8 @@ published: true
 
 In the last few days I haven't been writing much, but I have been spending a lot of time working on CodeCalendar. Today I'm going to show you how to implement a shake animation to demonstrate a negative response to user input. 
 
+I'm going to assume you know about UIViews, their frames and adding subViews.
+
 Also, bear with me if anything isn't clear, it's my first time teaching something like this. 
 
 <br>
@@ -50,7 +52,7 @@ I know it's difficult to see this on the simulator since I was recording at 30 f
 
 What's happening in this demonstration is that when the user has the "Select a language" row selected, pressing the "Done" button will shake the UIView and not allow the user to proceed to the next prompt. As you can see later in the gif, when the user has selected a valid row, the app will allow the user to move on.
 
-Now to the part of the post you've been reading for, here's my code for the implementation:
+Now to the part of the post you've been reading for, here's my code for my implementation:
 
 <div style="width:700px">
 <code>
@@ -120,12 +122,26 @@ We do this by first defining a new frame that is slightly offset to the right of
 <div style = "width:700px">
 <code>
 	float offset = 5.0; 
-
+	<br>
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 </code>
 </div>
 
-shakeFrameRight has the same frame as the defaultFrame, except that the origin.x is increased by offset, which is 5.0. This means that a small part of our viewToShake is going to be off screen. 
+shakeFrameRight has the same frame as the defaultFrame, except that the origin.x of the frame is increased by offset, which is 5.0. This means that a small part of our shakeFrameRight is going to be off screen. 
+
+Next, we do the same thing by defining shakeFrameLeft
+
+<div style = "width:700px">
+<code>
+	float offset = 5.0; 
+	<br>
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+</code>
+</div>
+
+This time, instead of adding the offset to the origin.x of the frame, 
+
+
 
 
 
