@@ -182,7 +182,7 @@ Next, we do the same thing by defining shakeFrameLeft
 
 This time, instead of adding the offset to the origin.x of the frame, we subtract it, since in the iOS view coordinate system, subtracting from the origin.x moves left in the view and adding to the origin.x moves right. 
 <br>
-Before we start animating, we set the frame of our viewToShake to defaultFrame:
+Before we start animating, we set the frame of our viewToShake to shakeFrameRight:
 
 <div style = "width:700px">
 <code>
