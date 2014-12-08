@@ -92,7 +92,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
       }];
 
 	}
-</code>
+    
 
 If you're not familiar with UIView animations, I would first suggest reading [this](http://code.tutsplus.com/tutorials/ios-sdk-uiview-animations--mobile-10706) tutorial. Basically, however, UIView animations are a very easy way to animate the following properties of a UIView: 
 
