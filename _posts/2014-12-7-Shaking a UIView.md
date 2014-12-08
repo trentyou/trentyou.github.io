@@ -79,13 +79,13 @@ Now to the part of the post you've been reading for, here's my code for the impl
       [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ <br>
   
           [UIView setAnimationRepeatCount:repeatCount]; <br>
-          
+          <br>
           [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
   
               viewToShake.frame = shakeFrameLeft; <br>
   
           }]; <br>
-  
+  <br>
           [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
   
               viewToShake.frame = shakeFrameRight; <br>
