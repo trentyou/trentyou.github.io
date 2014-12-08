@@ -142,9 +142,17 @@ CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <b
 <br>
        self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f); <br>
        <br>
+       
+        UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; <br>
+        [self.view addSubview: viewToShake];<br>
+        <br>
+        
+        [self animateShake:viewToShake];<br>
 </code>
 </div>
-I'm defining the defaultFrame of our view. This is where the view resides on our screen when we aren't animating it to shake. I chose an origin.x of the frame to be 0.0, the origin.y to be the midpoint of the screen of our device, offset by 150.0 points toward the top of the screen. The width of the frame is going to span the width of the screen of our device, and the height of the frame is going to be a preset value that I determined (325.0 points).
+I defining the defaultFrame of our view. I chose an origin.x of the frame to be 0.0, the origin.y to be the midpoint of the screen of our device, offset by 150.0 points toward the top of the screen. The width of the frame is going to span the width of the screen of our device, and the height of the frame is going to be a preset value that I determined (325.0 points).
+
+I instantiate a new UIView with the defaultFrame I just defined, and add it as a subview to self.view. Next I call the animateShake: method.
 <br>
 
 
