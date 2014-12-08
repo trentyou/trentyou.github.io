@@ -8,6 +8,8 @@ published: true
 
 In the last few days I haven't been writing much, but I have been spending a lot of time working on CodeCalendar. Today I'm going to show you how to implement a shake animation to demonstrate a negative response to user input. 
 
+Also, bear with me if anything isn't clear, it's my first time teaching something like this. 
+
 <br>
 First, some background on my work so far: 
 
@@ -49,32 +51,46 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 Now to the part of the post you've been reading for, here's my code for the implementation:
 
+<code>
+
+(void)animateShake:(UIView *)viewToShake
+ 
+{
+    float duration = 0.06;
+    float offset = 5.0;
+    float repeatCount = 3.0;
+
+    CGRect shakeFrameRight = CGRectMake(self.animatedFrame.origin.x + offset, self.animatedFrame.origin.y, self.animatedFrame.size.width, self.animatedFrame.size.height);
+
+    CGRect shakeFrameLeft = CGRectMake(self.animatedFrame.origin.x - offset, self.animatedFrame.origin.y, self.animatedFrame.size.width, self.animatedFrame.size.height);
+
+viewToShake.frame = shakeFrameRight;
+
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+
+        [UIView setAnimationRepeatCount:repeatCount];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+
+            viewToShake.frame = shakeFrameLeft;
+
+        }];
+
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+
+            viewToShake.frame = shakeFrameRight;
+
+        }];
+
+    }completion:^(BOOL finished) {
+        viewToShake.frame = self.animatedFrame;
+    }];
+
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</code>
 
 
 
