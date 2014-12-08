@@ -361,8 +361,9 @@ float repeatCount = 3.0;<br>
 ---- <br>
 <br>
 animations:^{ <br>
-
+<br>
 [UIView setAnimationRepeatCount:repeatCount]; <br>
+<br>
 
 [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
 viewToShake.frame = shakeFrameLeft; <br>
