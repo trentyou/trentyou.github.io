@@ -200,7 +200,6 @@ The UIView class contains the methods that animate views for you. The class meth
 
 To call this method, we type:
 
-
 <div style = "width:700px">
 <code>
 [UIView animateKeyframesWithDuration: delay: options: animations:^{
@@ -238,11 +237,12 @@ float duration = 0.06; <br>
 The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is quite extensive, but we only need two of them for this example: 
 
 
-_UIViewKeyframeAnimationOptionRepeat   UIViewAnimationOptionCurveEaseInOut_
+_UIViewKeyframeAnimationOptionRepeat and UIViewAnimationOptionCurveEaseInOut_
 
 - UIViewKeyFrameAnimationOptionRepeat just repeats the animation indefinitely unless you specify an animation repeat count. 
 
 - UIViewAnimationOptionCurveEaseInOut has an acceleration curve for the animation, meaning the animation begins slowly, then speeds up in the middle, then slows down again toward the end of the animation. We use it here to smooth out our shake animation.
+<br>
 
 <div style = "width:700px">
 <code>
@@ -254,11 +254,23 @@ float duration = 0.06; <br>
 </code>
 </div>
 
-The next parameter might look a little bit confusing. It expects a block, which is basically a block of code that we're passing into the method that we want to be executed. The animations block syntax for this example is going to be 
+The next parameter might look a little bit confusing. It expects a block, which is basically a block of code that we want to be executed by the animation method. The animations block syntax for this example is going to be 
 
 ^{ //Your code here }
 
-Inside this block is where we're going to be doing all our animating. We're using the animateKeyFrames animation method, which means that 
+Inside this block is where we're going to be doing all our animating. We're using the animateKeyFramesWithDuration animation method, which gives us the option of adding keyframes to the animation, which are frames within the animation that we specify. 
+
+The two frames we're going to be specifying are the shakeFrameRight and shakeFrameLeft that we defined earlier. Basically, the animation is going to be moving between the two frames. To specify a keyframe, we add it into the animation block:
+
+<div style = "width:700px">
+<code>
+animations:^{ <br>
+[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+viewToShake.frame = shakeFrameLeft; <br>
+}]; 
+}
+</code>
+</div>
 
 
 
