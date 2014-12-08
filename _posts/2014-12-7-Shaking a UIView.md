@@ -300,7 +300,7 @@ The two frames we're going to be specifying are the shakeFrameRight and shakeFra
 animations:^{ <br>
 [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
 viewToShake.frame = shakeFrameLeft; <br>
-}]; 
+}]; <br>
 }
 </code>
 </div>
