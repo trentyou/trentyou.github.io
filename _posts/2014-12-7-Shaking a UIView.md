@@ -287,7 +287,7 @@ float duration = 0.06; <br>
 </code>
 </div>
 
-The next parameter might look a little bit confusing. It expects a block, which is basically a block of code that we want to be executed by the animation method. The animations block syntax for this example is going to be 
+The next parameter might look a little bit confusing. It expects a block, which is basically a block of code that we want to be executed by the animation method. The animations block syntax for this example is going to be: 
 
 ^{ //Your code here }
 
