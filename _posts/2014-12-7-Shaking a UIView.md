@@ -272,6 +272,7 @@ viewToShake.frame = shakeFrameLeft; <br>
 </code>
 </div>
 
+This is getting a little crazy, but inside our animation block, we have another method that takes an animation block as a parameter. Inside this nested animation block is where we put what we want our first animation to be. We want our 
 
 
 
