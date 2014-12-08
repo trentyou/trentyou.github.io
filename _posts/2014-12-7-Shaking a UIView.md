@@ -8,7 +8,7 @@ published: true
 
 In the last few days I haven't been writing much, but I have been spending a lot of time working on CodeCalendar. Today I'm going to show you how to implement a shake animation to demonstrate a negative response to user input. 
 
-I'm going to assume you know about UIViews, their frames and have heard of blocks.
+I'm going to assume you know about UIViews, their frames, adding subviews and have heard of blocks.
 
 Also, bear with me if anything isn't clear, it's my first time teaching something like this. 
 
