@@ -377,7 +377,9 @@ We're done with the animation block! The final parameter in the addKeyFramesWith
 
 You're done! If any of the code isn't working for you, check with the first code snippet I posted that includes all the code I talked about. 
 
-You can mess around with the offset, the duration and 
+You can mess around with the offset, the duration and the repeatCount to get an animation that you like. There are a lot of ways to achieve a shake animation, this was just one way. 
+
+Thanks for reading!
 
 
 
