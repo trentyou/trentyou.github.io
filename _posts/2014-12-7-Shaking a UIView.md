@@ -8,7 +8,7 @@ published: true
 
 In the last few days I haven't been writing much, but I have been spending a lot of time working on CodeCalendar. Today I'm going to show you how to implement a shake animation to demonstrate a negative response to user input. 
 
-I'm going to assume you know about UIViews, their frames and adding subViews.
+I'm going to assume you know about UIViews, their frames and have heard of blocks.
 
 Also, bear with me if anything isn't clear, it's my first time teaching something like this. 
 
@@ -140,7 +140,7 @@ We do this by first defining a new frame that is slightly offset to the right of
 </code>
 </div>
 
-shakeFrameRight has the same frame as the defaultFrame, except that the origin.x of the frame is increased by offset, which is 5.0. This means that a small part of our shakeFrameRight is going to be off screen to the right. 
+shakeFrameRight has the same frame as the defaultFrame, except that the origin.x of the frame is increased by offset = 5.0. This means that a small part of our shakeFrameRight is going to be off screen to the right. 
 
 Next, we do the same thing by defining shakeFrameLeft
 
@@ -154,6 +154,7 @@ Next, we do the same thing by defining shakeFrameLeft
 
 This time, instead of adding the offset to the origin.x of the frame, we subtract it, since in the iOS view coordinate system, subtracting from the origin.x moves left in the view and adding to the origin.x moves right. 
 <br>
+
 Now that we have the two frames that we'll be animating between, let's dive into the animation method. This is going to look a lot more intimidating than it really is (in part due to my bad HTML formatting skills), but don't worry, I'm going to describe every portion of the code.
 
 <div style = "width:700px">
@@ -182,6 +183,8 @@ Now that we have the two frames that we'll be animating between, let's dive into
 	
 </code>
 </div>
+
+UIView has a class method
 
 
 
