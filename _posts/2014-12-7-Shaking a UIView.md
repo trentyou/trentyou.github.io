@@ -189,6 +189,7 @@ Now that we have the two frames that we'll be animating between, let's dive into
 </div>
 
 UIView has class methods that animate views for you. The class method we're using is 
+
 <code>
 +(void)animateKeyframesWithDuration:(NSTimeInterval)duration
                                delay:(NSTimeInterval)delay
@@ -197,7 +198,16 @@ UIView has class methods that animate views for you. The class method we're usin
                           completion:(void (^)(BOOL finished))completion
 </code>
 
+To call this method, we type:
 
+
+<div style = "width:700px">
+<code>
+[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+} completion:^(BOOL finished)completion {
+}
+</code>
+</div>
 
 
 
