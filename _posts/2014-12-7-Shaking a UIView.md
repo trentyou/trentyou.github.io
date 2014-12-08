@@ -18,7 +18,7 @@ I have a UIPickerView on a view that pops up after the user ends a coding sessio
 <div style="text-align:center" markdown ="1">
 ![](/images/pickerexample_post4.jpg)
 </div>
- <br>
+ <br></br>
 
 The issue with UIPickerView is that the delegate method
 
