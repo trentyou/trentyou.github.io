@@ -387,6 +387,9 @@ The final parameter in the addKeyFramesWithDuration method is another block. It 
       }]; <br>
 </code>
 </div>
+<br>
+<br>
+
 
 You're done! Call the shakeAnimate: method from anywhere else in your app and pass it a view that you want to shake. Just remember that the method depends on the instance variable self.defaultFrame so remember to change that if you want to mess around with your own views. Or redesign the method to your own needs. This was just a quick and dirty demonstration. 
 
