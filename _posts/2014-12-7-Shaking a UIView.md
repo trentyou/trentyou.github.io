@@ -54,7 +54,7 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 <br>
 <br>
-**Now to the part of the post you've been reading for, here's my implementation code:**
+**Now to the part of the post you've been reading for, here's my implementation:**
 
 <div style="width:700px">
 <code>
