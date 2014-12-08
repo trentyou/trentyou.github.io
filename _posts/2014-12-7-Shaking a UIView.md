@@ -238,14 +238,27 @@ float duration = 0.06; <br>
 The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is quite extensive, but we only need two of them for this example: 
 
 
-UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut
+_UIViewKeyframeAnimationOptionRepeat   UIViewAnimationOptionCurveEaseInOut_
 
+- UIViewKeyFrameAnimationOptionRepeat just repeats the animation indefinitely unless you specify an animation repeat count. 
 
-UIViewKeyFrameAnimationOptionRepeat just repeats the animation indefinitely unless you specify an animation repeat count. 
+- UIViewAnimationOptionCurveEaseInOut has an acceleration curve for the animation, meaning the animation begins slowly, then speeds up in the middle, then slows down again toward the end of the animation. We use it here to smooth out our shake animation.
 
-UIViewAnimationOptionCurveEaseInOut
+<div style = "width:700px">
+<code>
+float duration = 0.06; <br>
+<br>
+[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut UIView animations:^{
+} completion:^(BOOL finished)completion {
+}];
+</code>
+</div>
 
+The next parameter might look a little bit confusing. It expects a block, which is basically a block of code that we're passing into the method that we want to be executed. The animations block syntax for this example is going to be 
 
+^{ //Your code here }
+
+Inside this block is where we're going to be doing all our animating. We're using the animateKeyFrames animation method, which means that 
 
 
 
