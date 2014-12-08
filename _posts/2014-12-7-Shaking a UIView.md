@@ -360,7 +360,7 @@ animations:^{ <br>
 viewToShake.frame = shakeFrameLeft; <br>
 <br>
 [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
-viewToShake.frame = shakeFrameLeft; <br>
+viewToShake.frame = shakeFrameRight; <br>
 }
 }
 </code>
