@@ -126,10 +126,9 @@ CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <b
        <br>
 </code>
 </div>
-
-I'm defining the defaultFrame of our view. This is where the view resides on our screen when we aren't animating it shaking. I chose an origin.x of the frame to be 0.0, the origin.y to be the midpoint of the screen of our device, offset by 150.0 points toward the top of the screen. The width of the frame is going to span the width of the screen of our device, and the height of the frame is going to be a preset value that I determined (325.0 points).
-
-What we're doing in a nutshell is animating the frame of the viewToShake by moving it _slightly_ to the right (5 pixels equivalents) from the defaultFrame, and then animating it _slightly_ to the left (5 pixel equivalents) from the defaultFrame. We're going to be doing this very fast.
+I'm defining the defaultFrame of our view. This is where the view resides on our screen when we aren't animating it to shake. I chose an origin.x of the frame to be 0.0, the origin.y to be the midpoint of the screen of our device, offset by 150.0 points toward the top of the screen. The width of the frame is going to span the width of the screen of our device, and the height of the frame is going to be a preset value that I determined (325.0 points).
+<br>
+What we're going to be doing in a nutshell is animating the frame of the viewToShake by moving it _slightly_ to the right (5 pixel equivalents) from the defaultFrame, and then animating it _slightly_ to the left (5 pixel equivalents) from the defaultFrame. We're going to be doing this very fast.
 
 We do this by first defining a new frame that is slightly offset to the right of the defaultFrame.
 
