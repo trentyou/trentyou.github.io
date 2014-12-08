@@ -10,7 +10,7 @@ In the last few days I haven't been writing much, but I have been spending a lot
 
 Also, bear with me if anything isn't clear, it's my first time teaching something like this. 
 
-<br>
+<br></br>
 First, some background on my work so far: 
 
 I have a UIPickerView on a view that pops up after the user ends a coding session. 
@@ -43,7 +43,7 @@ Here is my implementation of the shake animation:
 <div style="text-align:center" markdown="1">
 ![](/images/shake_post4.gif)
 </div>
-<br>
+<br></br>
 
 I know it's difficult to see this on the simulator since I was recording at 30 fps, but I think it looks nice when testing on an actual device.
 
@@ -53,7 +53,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
 
 <code>
 
-(void)animateShake:(UIView *)viewToShake
+ (void)animateShake:(UIView *)viewToShake
  
 {
     float duration = 0.06;
