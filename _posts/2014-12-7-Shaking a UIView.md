@@ -8,7 +8,7 @@ published: true
 
 In the last few days I haven't been writing much, but I have been spending a lot of time working on CodeCalendar. Today I'm going to show you how to implement a shake animation to demonstrate a negative response to user input. 
 
-<div style="text-align:center markdown ="1">
+<div style="text-align:center" markdown ="1">
 ![](/images/pickerexample_post4.jpg)
 </div>
 
