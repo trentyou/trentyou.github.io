@@ -52,7 +52,7 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 Now to the part of the post you've been reading for, here's my code for the implementation:
 
-<div style="width:400px">
+<div style="width:700px">
 <code>
 
 	(void)animateShake:(UIView *)viewToShake
