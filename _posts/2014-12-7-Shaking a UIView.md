@@ -52,7 +52,9 @@ I know it's difficult to see this on the simulator since I was recording at 30 f
 
 What's happening in this demonstration is that when the user has the "Select a language" row selected, pressing the "Done" button will shake the UIView and not allow the user to proceed to the next prompt. As you can see later in the gif, when the user has selected a valid row, the app will allow the user to move on.
 
-Now to the part of the post you've been reading for, here's my code for my implementation:
+<br>
+<br>
+**Now to the part of the post you've been reading for, here's my code for my implementation:**
 
 <div style="width:700px">
 <code>
