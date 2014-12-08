@@ -56,14 +56,25 @@ Now to the part of the post you've been reading for, here's my code for my imple
 
 <div style="width:700px">
 <code>
+	@property (nonatomic) CGRect defaultFrame;
+    ------
+    (void)viewDidLoad
+    {
+    	// Configuring the default frame. This is the frame of your view before the shake animation <br>
+       CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <br>
+       self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f); <br>
+       <br>
+    
+    	UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; <br>
+        [self.view addSubview: viewToShake];<br>
+        <br>
+        
+        [self animateShake:viewToShake];<br>
+    }
 
 	(void)animateShake:(UIView *)viewToShake <br>
     
 	{ <br>
-    <br>
-      // Configuring the default frame. This is the frame of your view before the shake animation <br>
-       CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <br>
-       self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f); <br>
        <br>
       
       float duration = 0.06; <br>
@@ -82,7 +93,7 @@ Now to the part of the post you've been reading for, here's my code for my imple
   
           [UIView setAnimationRepeatCount:repeatCount]; <br>
           <br>
-          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+          [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
   
               viewToShake.frame = shakeFrameLeft; <br>
   
@@ -158,6 +169,15 @@ Next, we do the same thing by defining shakeFrameLeft
 
 This time, instead of adding the offset to the origin.x of the frame, we subtract it, since in the iOS view coordinate system, subtracting from the origin.x moves left in the view and adding to the origin.x moves right. 
 <br>
+Before we start animating, we set the frame of our viewToShake to defaultFrame:
+
+<div style = "width:700px">
+<code>
+    	viewToShake.frame = shakeFrameRight; 
+</code>
+</div>
+
+This will set us up to animate between the two frames we defined earlier.
 
 Now that we have the two frames that we'll be animating between, let's dive into the animation method. This is going to look a lot more intimidating than it really is (in part due to my bad HTML formatting skills), but don't worry, I'm going to describe every portion of this code.
 
@@ -167,7 +187,7 @@ Now that we have the two frames that we'll be animating between, let's dive into
   
           [UIView setAnimationRepeatCount:repeatCount]; <br>
           <br>
-          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+          [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
   
               viewToShake.frame = shakeFrameLeft; <br>
   
@@ -265,7 +285,7 @@ The two frames we're going to be specifying are the shakeFrameRight and shakeFra
 <div style = "width:700px">
 <code>
 animations:^{ <br>
-[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
 viewToShake.frame = shakeFrameLeft; <br>
 }]; 
 }
@@ -276,11 +296,25 @@ This is getting a little crazy, but inside our animation block, we have another 
 
 viewToShake.frame = shakeFrameLeft;
 
-We're telling UIView that we want to take the current frame of viewToShake and animate it to shakeFrameLeft. The other parameters 
+We're telling UIView that we want to take the current frame of viewToShake and animate it to shakeFrameLeft. The other parameter 
 
-addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5
+<div style = "width:700px">
+<code>
+	addKeyframeWithRelativeStartTime:0.0
+</code>
+</div>
 
-represent how long of the total animation duration we want to spend on this keyframe (0.5 means half of the total animation duration, while 
+represents when during the total animation time you want this animation to start. 0.0 will mean this keyframe will start right after the animation method is called, while 0.5 means the keyframe will start halfway through the total animation time.
+
+<div style = "width:700px">
+<code>
+	relativeDuration:0.5
+</code>
+</div>
+
+This parameter means that 
+
+
 
 
 
