@@ -205,9 +205,10 @@ To call this method, we type:
 <code>
 [UIView animateKeyframesWithDuration: delay: options: animations:^{
 } completion:^(BOOL finished)completion {
-}
+}]
 </code>
 </div>
+<br>
 
 The first parameter of our method is the duration of length we want for our animation in seconds. I played around a lot with the time to see what looked good and I came up with 0.06 seconds. This means one left to right shake and back will take less than a tenth of a second. You can play around with your own duration time to see what looks good to you.
 
@@ -231,6 +232,7 @@ float duration = 0.06; <br>
 } completion:^(BOOL finished)completion {
 }
 </code>
+<br>
 
 The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is quite extensive, but we only need two of them for this example: 
 
