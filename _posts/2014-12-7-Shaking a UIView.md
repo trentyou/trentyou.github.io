@@ -62,35 +62,35 @@ Now to the part of the post you've been reading for, here's my code for the impl
        CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <br>
        self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f); <br>
       
-      float duration = 0.06;
-      float offset = 5.0;
-      float repeatCount = 3.0;
+      float duration = 0.06; <br>
+      float offset = 5.0; <br>
+      float repeatCount = 3.0; <br>
   
-      CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+      CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); <br>
   
-      CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+      CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); <br>
   
-      viewToShake.frame = shakeFrameRight;
+      viewToShake.frame = shakeFrameRight; <br>
   
-      [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+      [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ <br>
   
-          [UIView setAnimationRepeatCount:repeatCount];
+          [UIView setAnimationRepeatCount:repeatCount]; <br>
           
-          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
   
-              viewToShake.frame = shakeFrameLeft;
+              viewToShake.frame = shakeFrameLeft; <br>
   
-          }];
+          }]; <br>
   
-          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
   
-              viewToShake.frame = shakeFrameRight;
+              viewToShake.frame = shakeFrameRight; <br>
   
-          }];
+          }]; <br>
   
-      }completion:^(BOOL finished) {
-          viewToShake.frame = self.defaultFrame;
-      }];
+      }completion:^(BOOL finished) { <br>
+          viewToShake.frame = self.defaultFrame; <br> 
+      }]; <br>
 
 	}
 
