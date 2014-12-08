@@ -280,6 +280,7 @@ We're telling UIView that we want to take the current frame of viewToShake and a
 
 addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5
 
+represent how long of the total animation duration we want to spend on this keyframe (0.5 means half of the total animation duration, while 
 
 
 
