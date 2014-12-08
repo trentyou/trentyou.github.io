@@ -72,7 +72,8 @@ Now to the part of the post you've been reading for, here's my code for my imple
         <br>
         
         [self animateShake:viewToShake];<br>
-    }
+    }<br>
+    <br>
 
 	(void)animateShake:(UIView *)viewToShake <br>
     
