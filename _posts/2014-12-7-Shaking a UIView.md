@@ -13,4 +13,3 @@ I have a UIPickerView on a view that pops up after the user ends a coding sessio
 <code>
 (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 
-</code>
