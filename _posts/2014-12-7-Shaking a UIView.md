@@ -104,7 +104,7 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 - Background Color
 - contentStretch
 
-We're only going to worry about the frame in this example. What we're doing in a nutshell is animating the frame of the view you're trying to shake moving _slightly_ to the left, and then animating it _slightly_ to the right. We're going to be doing this very fast
+We're only going to worry about the frame in this example. What we're doing in a nutshell is animating the frame of the viewToShake by moving it _slightly_ to the left, and then animating it _slightly_ to the right. We're going to be doing this very fast
 
 
 
