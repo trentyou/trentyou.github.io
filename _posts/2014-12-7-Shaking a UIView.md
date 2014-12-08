@@ -56,10 +56,12 @@ Now to the part of the post you've been reading for, here's my code for my imple
 
 <div style="width:700px">
 <code>
-	@property (nonatomic) CGRect defaultFrame;
-    ------
-    (void)viewDidLoad
-    {
+	@property (nonatomic) CGRect defaultFrame; <br>
+    ------<br>
+    <br>
+    <br>
+    (void)viewDidLoad <br>
+    {<br>
     	// Configuring the default frame. This is the frame of your view before the shake animation <br>
        CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <br>
        self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f); <br>
