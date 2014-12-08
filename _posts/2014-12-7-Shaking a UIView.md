@@ -315,7 +315,7 @@ viewToShake.frame = shakeFrameLeft;
 
 We're telling UIView that we want to take the current frame of viewToShake (which has earlier been set to shakeFrameRight) and animate it to shakeFrameLeft. 
 
-The other parameter 
+The other parameter: 
 
 <div style = "width:700px">
 <code>
