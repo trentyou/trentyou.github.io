@@ -55,7 +55,7 @@ Now to the part of the post you've been reading for, here's my code for the impl
 <div style="width:700px">
 <code>
 
-	(void)animateShake:(UIView *)viewToShake
+	(void)animateShake:(UIView *)viewToShake <br>
     
 	{
       // Configuring the default frame. This is the frame of your view before the shake animation
