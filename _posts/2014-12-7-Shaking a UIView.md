@@ -117,11 +117,13 @@ We're only going to worry about the frame in this example. What we're doing in a
 
 We do this by first defining a new frame that is slightly offset to the right of the defaultFrame.
 
+<div style = "width:700px">
 <code>
 	float offset = 5.0; 
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 </code>
+</div>
 
 shakeFrameRight has the same frame as the defaultFrame, except that the origin.x is increased by offset, which is 5.0. This means that a small part of our viewToShake is going to be off screen. 
 
