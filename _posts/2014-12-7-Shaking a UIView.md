@@ -188,7 +188,7 @@ Now that we have the two frames that we'll be animating between, let's dive into
 </code>
 </div>
 
-UIView has class methods that animate views for you. The class method we're using is 
+The UIView class contains the methods that animate views for you. The class method we're using is 
 
 <code>
 +(void)animateKeyframesWithDuration:(NSTimeInterval)duration
@@ -203,7 +203,19 @@ To call this method, we type:
 
 <div style = "width:700px">
 <code>
-[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+[UIView animateKeyframesWithDuration: delay: options: animations:^{
+} completion:^(BOOL finished)completion {
+}
+</code>
+</div>
+
+The first parameter of our method is the duration of length we want for our animation in seconds. I played around a lot with the time to see what looked good and I came up with 0.06 seconds. This means one left to right shake and back will take less than a tenth of a second. You can play around with your own duration time to see what looks good to you.
+
+<div style = "width:700px">
+<code>
+float duration = 0.06; <br>
+<br>
+[UIView animateKeyframesWithDuration:duration delay: options: animations:^{
 } completion:^(BOOL finished)completion {
 }
 </code>
