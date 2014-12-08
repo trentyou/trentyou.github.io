@@ -116,7 +116,9 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 - contentStretch
 
 
-We're only going to worry about the frame in this example. In the first line of code, 
+We're only going to worry about animating the frame of our view in this example. 
+
+In the first line of code, 
 
 <div style = "width:700px">
 <code>
