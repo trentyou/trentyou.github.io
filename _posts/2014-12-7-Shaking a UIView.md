@@ -221,6 +221,20 @@ float duration = 0.06; <br>
 </code>
 </div>
 
+The next parameter is delay:, which is the length of time in seconds between when the method is called and when you want your animation to start. We're going to set this to 0.0 since we want the animation to start right when this method is called.
+
+<div style = "width:700px">
+<code>
+float duration = 0.06; <br>
+<br>
+[UIView animateKeyframesWithDuration:duration delay:0.0 options: animations:^{
+} completion:^(BOOL finished)completion {
+}
+</code>
+
+The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is quite extensive, but we only need two of them for this example: 
+
+UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut
 
 
 
