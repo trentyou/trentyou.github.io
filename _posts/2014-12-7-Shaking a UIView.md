@@ -128,7 +128,7 @@ In viewDidLoad,
 <pre><code>
 - (void)viewDidLoad 
 {
-	CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
+CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
 
 	self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);        
        
