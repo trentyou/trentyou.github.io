@@ -107,8 +107,7 @@ What's happening in this demonstration is that when the user has the "Select a l
       }completion:^(BOOL finished) { 
           viewToShake.frame = self.defaultFrame; 
       }]; 
-
-	}
+}
 
 </code></pre>
 
@@ -153,7 +152,6 @@ We do this by first defining a new frame that is slightly offset to the right of
 
 <pre><code>
 - (void)animateShake:(UIView *)viewToShake
-    
 { 
 	float offset = 5.0; 
 
@@ -166,54 +164,61 @@ shakeFrameRight has the same frame as the defaultFrame, except that the origin.x
 
 Next, we do the same thing by defining shakeFrameLeft
 
-<div style = "width:700px">
-<code>
+<pre><code>
+- (void)animateShake:(UIView *)viewToShake
+{ 
 	float offset = 5.0; 
-	<br>
-	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-</code>
-</div>
+
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+}
+</code></pre>
 
 This time, instead of adding the offset to the origin.x of the frame, we subtract it, since in the iOS view coordinate system, subtracting from the origin.x moves left in the view and adding to the origin.x moves right. 
 <br>
 Before we start animating, we set the frame of our viewToShake to shakeFrameRight:
 
-<div style = "width:700px">
-<code>
-    	viewToShake.frame = shakeFrameRight; 
-</code>
-</div>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0; 
+
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+    viewToShake.frame = shakeFrameRight; 
+}
 
 This will set us up to animate between the two frames we defined earlier.
 
-Now that we have the two frames that we'll be animating between, let's dive into the animation method. This is going to look a lot more intimidating than it really is (in part due to my bad HTML formatting skills), but don't worry, I'm going to describe every portion of this code.
+Now that we have the two frames that we'll be animating between, let's dive into the animation method. This is going to look a lot more intimidating than it really is, but don't worry, I'm going to describe every part of this code.
 
-<div style = "width:700px">
-<code>
-[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ <br>
-  
-          [UIView setAnimationRepeatCount:repeatCount]; <br>
-          <br>
-          [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
-  
-              viewToShake.frame = shakeFrameLeft; <br>
-  
-          }]; <br>
-  <br>
-          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
-  
-              viewToShake.frame = shakeFrameRight; <br>
-  
-          }]; <br>
-  <br>
-      }completion:^(BOOL finished) { <br>
-          viewToShake.frame = self.defaultFrame; <br> 
-      }]; <br>
 
-	}
+<pre><code>
+[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ 
+  
+          [UIView setAnimationRepeatCount:repeatCount]; 
+          
+          [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+  
+              viewToShake.frame = shakeFrameLeft; 
+  
+          }]; 
+  
+          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
+              viewToShake.frame = shakeFrameRight; 
+  
+          }]; 
+  
+      }completion:^(BOOL finished) { 
+          viewToShake.frame = self.defaultFrame; 
+      }]; 
+
+}
 	
-</code>
-</div>
+</code></pre>
 
 The UIView class contains the methods that animate views for you. The class method we're using is 
 
