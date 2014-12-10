@@ -226,18 +226,28 @@ The UIView class contains the methods that animate views for you. The class meth
 </code></pre>
 
 To call this method, we want to type:
-
 <pre><code>
-[UIView animateKeyframesWithDuration: delay: options: animations:^{
-} completion:^(BOOL finished)completion {
-}];
-</code><pre>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0; 
 
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+    viewToShake.frame = shakeFrameRight; 
+    
+    [UIView animateKeyframesWithDuration: delay: options: animations:^{
+	} completion:^(BOOL finished)completion {
+    
+	}];
+}
+</code></pre>
+You can let Xcode autocomplete this long method for you.
 <br>
 
 The first parameter of our method is the duration of length we want for our animation in seconds. I played around a lot with the time to see what looked good and I came up with 0.06 seconds. This means one left to right shake and back will take less than a tenth of a second. You can play around with your own duration time to see what looks good to you.
 
-<div style = "width:700px">
 <code>
 float duration = 0.06; <br>
 <br>
