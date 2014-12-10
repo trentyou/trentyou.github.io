@@ -251,7 +251,7 @@ The first parameter of our method is the duration of length we want for our anim
 - (void)animateShake:(UIView *)viewToShake
 { 
 	float offset = 5.0;
-    float duration = 0.06;
+	float duration = 0.06;
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
@@ -270,7 +270,7 @@ The next parameter is delay:, which is the length of time in seconds between whe
 - (void)animateShake:(UIView *)viewToShake
 { 
 	float offset = 5.0;
-    float duration = 0.06;
+	float duration = 0.06;
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
@@ -298,7 +298,7 @@ _UIViewKeyframeAnimationOptionRepeat and UIViewAnimationOptionCurveEaseInOut_
 - (void)animateShake:(UIView *)viewToShake
 { 
 	float offset = 5.0;
-    float duration = 0.06;
+	float duration = 0.06;
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
