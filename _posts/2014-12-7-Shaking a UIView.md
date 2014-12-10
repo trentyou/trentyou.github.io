@@ -122,7 +122,7 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 - contentStretch
 
 
-We're only going to worry about animating the frame of our view in this example. 
+We're only going to worry about animating the _frame_ of our view in this example. 
 
 In viewDidLoad, 
 <pre><code>
@@ -156,7 +156,6 @@ We do this by first defining a new frame that is slightly offset to the right of
 	float offset = 5.0; 
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 }
 </code></pre>
 
@@ -172,14 +171,13 @@ Next, we do the same thing by defining shakeFrameLeft
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
     CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 }
 </code></pre>
 
 This time, instead of adding the offset to the origin.x of the frame, we subtract it, since in the iOS view coordinate system, subtracting from the origin.x moves left in the view and adding to the origin.x moves right. 
 <br>
 Before we start animating, we set the frame of our viewToShake to shakeFrameRight:
-
+<pre><code>
 - (void)animateShake:(UIView *)viewToShake
 { 
 	float offset = 5.0; 
@@ -190,6 +188,7 @@ Before we start animating, we set the frame of our viewToShake to shakeFrameRigh
     
     viewToShake.frame = shakeFrameRight; 
 }
+</code></pre>
 
 This will set us up to animate between the two frames we defined earlier.
 
