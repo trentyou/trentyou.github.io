@@ -169,8 +169,7 @@ Next, we do the same thing by defining shakeFrameLeft
 	float offset = 5.0; 
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
-    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
 }
 </code></pre>
 
@@ -183,10 +182,9 @@ Before we start animating, we set the frame of our viewToShake to shakeFrameRigh
 	float offset = 5.0; 
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
-    viewToShake.frame = shakeFrameRight; 
+	viewToShake.frame = shakeFrameRight; 
 }
 </code></pre>
 
