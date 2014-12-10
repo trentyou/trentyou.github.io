@@ -58,61 +58,56 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 <div style="width:700px">
 <pre><code>
-	@property (nonatomic) CGRect defaultFrame; <br>
-    ------<br>
-    <br>
-    <br>
-    (void)viewDidLoad <br>
-    {<br>
-    	// Configuring the default frame. This is the frame of your view before the shake animation <br>
-       CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; <br>
-       self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f); <br>
-       <br>
+@property (nonatomic) CGRect defaultFrame; 
+------
+
+- (void)viewDidLoad 
+{
+    	// Configuring the default frame. This is the frame of your view before the shake animation 
+        CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
+        self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);      
     
     	UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; <br>
-        [self.view addSubview: viewToShake];<br>
-        <br>
+        [self.view addSubview: viewToShake];
         
-        [self animateShake:viewToShake];<br>
-    }<br>
-    <br>
+        
+        [self animateShake:viewToShake];
+    }
 
-	(void)animateShake:(UIView *)viewToShake <br>
+- (void)animateShake:(UIView *)viewToShake
     
-	{ <br>
-       <br>
+	{ 
       
-      float duration = 0.06; <br>
-      float offset = 5.0; <br>
-      float repeatCount = 3.0; <br>
-      <br>
+      float duration = 0.06; 
+      float offset = 5.0; 
+      float repeatCount = 3.0; 
+      
   
-      CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); <br>
-      <br>
+      CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); 
+      
   
-      CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); <br>
-  <br>
-      viewToShake.frame = shakeFrameRight; <br>
-<br>  
-      [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ <br>
+      CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); 
   
-          [UIView setAnimationRepeatCount:repeatCount]; <br>
-          <br>
-          [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
+      viewToShake.frame = shakeFrameRight; 
+
+      [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ 
   
-              viewToShake.frame = shakeFrameLeft; <br>
+          [UIView setAnimationRepeatCount:repeatCount]; 
+          [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
   
-          }]; <br>
-  <br>
-          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
+              viewToShake.frame = shakeFrameLeft;
   
-              viewToShake.frame = shakeFrameRight; <br>
+          }]; 
+
+          [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
   
-          }]; <br>
-  <br>
-      }completion:^(BOOL finished) { <br>
-          viewToShake.frame = self.defaultFrame; <br> 
-      }]; <br>
+              viewToShake.frame = shakeFrameRight; 
+  
+          }]; 
+  
+      }completion:^(BOOL finished) { 
+          viewToShake.frame = self.defaultFrame; 
+      }]; 
 
 	}
 
