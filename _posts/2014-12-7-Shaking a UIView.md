@@ -114,8 +114,6 @@ What's happening in this demonstration is that when the user has the "Select a l
 </code></pre>
 </div>
 
-Sorry about the crappy formatting on the code segments, I'm still pretty bad at HTML haha. 
-
 If you're not familiar with UIView animations, I would first suggest reading [this](http://code.tutsplus.com/tutorials/ios-sdk-uiview-animations--mobile-10706) tutorial. Basically, UIView animations are a very easy way to animate the following properties of a UIView from one value to another: 
 
 - Frame
