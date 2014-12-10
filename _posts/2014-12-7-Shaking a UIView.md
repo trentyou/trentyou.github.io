@@ -128,7 +128,7 @@ In viewDidLoad,
 <pre><code>
 - (void)viewDidLoad 
 {
-CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
+	CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
 
 	self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);        
        
@@ -184,7 +184,7 @@ Before we start animating, we set the frame of our viewToShake to shakeFrameRigh
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
-    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
     viewToShake.frame = shakeFrameRight; 
 }
@@ -235,7 +235,7 @@ To call this method, we want to type:
     
     CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
-    viewToShake.frame = shakeFrameRight; 
+	viewToShake.frame = shakeFrameRight; 
     
     [UIView animateKeyframesWithDuration: delay: options: animations:^{
 	} completion:^(BOOL finished)completion {
@@ -243,20 +243,29 @@ To call this method, we want to type:
 	}];
 }
 </code></pre>
-You can let Xcode autocomplete this long method for you.
+You can let Xcode autocomplete this method for you.
 <br>
 
 The first parameter of our method is the duration of length we want for our animation in seconds. I played around a lot with the time to see what looked good and I came up with 0.06 seconds. This means one left to right shake and back will take less than a tenth of a second. You can play around with your own duration time to see what looks good to you.
 
-<code>
-float duration = 0.06; <br>
-<br>
-[UIView animateKeyframesWithDuration:duration delay: options: animations:^{
-} completion:^(BOOL finished)completion {
-}];
-</code>
-</div>
+<pre><code>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0;
+    float duration = 0.06;
 
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	viewToShake.frame = shakeFrameRight; 
+    
+    [UIView animateKeyframesWithDuration:duration delay: options: animations:^{
+	} completion:^(BOOL finished)completion {
+    
+	}];
+}
+</code></pre>
 The next parameter is delay:, which is the length of time in seconds between when the method is called and when you want your animation to start. We're going to set this to 0.0 since we want the animation to start right when this method is called.
 
 <div style = "width:700px">
