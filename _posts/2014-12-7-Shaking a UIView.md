@@ -72,11 +72,11 @@ What's happening in this demonstration is that when the user has the "Select a l
         
         
         [self animateShake:viewToShake];
-    }
+}
 
 - (void)animateShake:(UIView *)viewToShake
     
-	{ 
+{ 
       
       float duration = 0.06; 
       float offset = 5.0; 
