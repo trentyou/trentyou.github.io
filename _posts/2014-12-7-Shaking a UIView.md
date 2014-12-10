@@ -59,7 +59,7 @@ What's happening in this demonstration is that when the user has the "Select a l
 <div style="width:700px">
 <pre><code>
 
-
+// Class extension
 @property (nonatomic) CGRect defaultFrame; 
 
 ------
@@ -126,11 +126,6 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 
 
 We're only going to worry about animating the frame of our view in this example. 
-The code above the 
-
-----
-
-refers to the class extension.
 
 In viewDidLoad, 
 <div style = "width:700px">
@@ -160,11 +155,16 @@ What we're going to be doing in a nutshell is animating the frame of the viewToS
 We do this by first defining a new frame that is slightly offset to the right of the defaultFrame.
 
 <div style = "width:700px">
-<code>
+<pre><code>
+- (void)animateShake:(UIView *)viewToShake
+    
+{ 
 	float offset = 5.0; 
-	<br>
+
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-</code>
+    
+}
+</code></pre>
 </div>
 
 shakeFrameRight has the same frame as the defaultFrame, except that the origin.x of the frame is increased by offset = 5.0. This means that a small part of our shakeFrameRight is going to be off screen to the right. 
