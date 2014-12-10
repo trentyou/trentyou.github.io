@@ -73,7 +73,6 @@ What's happening in this demonstration is that when the user has the "Select a l
     	UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; <br>
         [self.view addSubview: viewToShake];
         
-        
         [self animateShake:viewToShake];
 }
 
@@ -85,10 +84,7 @@ What's happening in this demonstration is that when the user has the "Select a l
       float offset = 5.0; 
       float repeatCount = 3.0; 
       
-  
       CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); 
-      
-  
       CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height); 
   
       viewToShake.frame = shakeFrameRight; 
