@@ -133,19 +133,18 @@ The code above the
 refers to the class extension.
 
 In viewDidLoad, 
-
 <div style = "width:700px">
 <pre><code>
 - (void)viewDidLoad 
 {
-		CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
+	CGFloat midpoint = ([UIScreen mainScreen].bounds.size.height / 2.0) - 150.0f; 
 
-		self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);        
+	self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);        
        
-       UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; 
-        [self.view addSubview: viewToShake];
+	UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; 
+	[self.view addSubview: viewToShake];
         
-        [self animateShake:viewToShake];
+	[self animateShake:viewToShake];
  }
 </code></pre>
 </div>
