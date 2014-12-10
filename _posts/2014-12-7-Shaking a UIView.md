@@ -201,43 +201,38 @@ Now that we have the two frames that we'll be animating between, let's dive into
           [UIView setAnimationRepeatCount:repeatCount]; 
           
           [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
-  
-              viewToShake.frame = shakeFrameLeft; 
-  
+              viewToShake.frame = shakeFrameLeft;
           }]; 
   
           [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
               viewToShake.frame = shakeFrameRight; 
-  
           }]; 
   
       }completion:^(BOOL finished) { 
           viewToShake.frame = self.defaultFrame; 
       }]; 
-
 }
 	
 </code></pre>
 
 The UIView class contains the methods that animate views for you. The class method we're using is 
 
-<code>
+<pre><code>
 +(void)animateKeyframesWithDuration:(NSTimeInterval)duration
                                delay:(NSTimeInterval)delay
                              options:(UIViewKeyframeAnimationOptions)options
                           animations:(void (^)(void))animations
                           completion:(void (^)(BOOL finished))completion
-</code>
+</code></pre>
 
-To call this method, we type:
+To call this method, we want to type:
 
-<div style = "width:700px">
-<code>
+<pre><code>
 [UIView animateKeyframesWithDuration: delay: options: animations:^{
 } completion:^(BOOL finished)completion {
 }];
-</code>
-</div>
+</code><pre>
+
 <br>
 
 The first parameter of our method is the duration of length we want for our animation in seconds. I played around a lot with the time to see what looked good and I came up with 0.06 seconds. This means one left to right shake and back will take less than a tenth of a second. You can play around with your own duration time to see what looks good to you.
