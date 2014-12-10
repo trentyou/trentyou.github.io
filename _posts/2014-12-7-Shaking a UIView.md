@@ -232,7 +232,6 @@ To call this method, we want to type:
 	float offset = 5.0; 
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
 	viewToShake.frame = shakeFrameRight; 
@@ -255,12 +254,11 @@ The first parameter of our method is the duration of length we want for our anim
     float duration = 0.06;
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
 	viewToShake.frame = shakeFrameRight; 
     
-    [UIView animateKeyframesWithDuration:duration delay: options: animations:^{
+	[UIView animateKeyframesWithDuration:duration delay: options: animations:^{
 	} completion:^(BOOL finished)completion {
     
 	}];
@@ -275,12 +273,11 @@ The next parameter is delay:, which is the length of time in seconds between whe
     float duration = 0.06;
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
 	viewToShake.frame = shakeFrameRight; 
     
-    [UIView animateKeyframesWithDuration:duration delay:0.0 options: animations:^{
+	[UIView animateKeyframesWithDuration:duration delay:0.0 options: animations:^{
 	} completion:^(BOOL finished)completion {
     
 	}];
@@ -304,7 +301,6 @@ _UIViewKeyframeAnimationOptionRepeat and UIViewAnimationOptionCurveEaseInOut_
     float duration = 0.06;
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
 	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
 	viewToShake.frame = shakeFrameRight; 
