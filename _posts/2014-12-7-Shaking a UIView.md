@@ -221,20 +221,10 @@ The UIView class contains the methods that animate views for you. The class meth
 
 To call this method, we want to type:
 <pre><code>
-- (void)animateShake:(UIView *)viewToShake
-{ 
-	float offset = 5.0; 
-
-	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
-    
-	viewToShake.frame = shakeFrameRight; 
-    
     [UIView animateKeyframesWithDuration: delay: options: animations:^{
 	} completion:^(BOOL finished)completion {
     
 	}];
-}
 </code></pre>
 You can let Xcode autocomplete this method for you.
 <br>
