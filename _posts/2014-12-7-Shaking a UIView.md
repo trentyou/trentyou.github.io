@@ -56,7 +56,6 @@ What's happening in this demonstration is that when the user has the "Select a l
 <br>
 **Now to the part of the post you've been reading for, here's my implementation:**
 
-<div style="width:700px">
 <pre><code>
 
 // Class extension
@@ -112,7 +111,6 @@ What's happening in this demonstration is that when the user has the "Select a l
 	}
 
 </code></pre>
-</div>
 
 If you're not familiar with UIView animations, I would first suggest reading [this](http://code.tutsplus.com/tutorials/ios-sdk-uiview-animations--mobile-10706) tutorial. Basically, UIView animations are a very easy way to animate the following properties of a UIView from one value to another: 
 
@@ -128,7 +126,6 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 We're only going to worry about animating the frame of our view in this example. 
 
 In viewDidLoad, 
-<div style = "width:700px">
 <pre><code>
 - (void)viewDidLoad 
 {
@@ -142,7 +139,6 @@ In viewDidLoad,
 	[self animateShake:viewToShake];
  }
 </code></pre>
-</div>
 
 I define the defaultFrame of our view. I chose an origin.x of the frame to be 0.0, the origin.y to be the midpoint of the screen of our device, offset by 150.0 points toward the top of the screen. The width of the frame is going to span the width of the screen of our device, and the height of the frame is going to be a preset value that I determined (325.0 points).
 
@@ -154,7 +150,7 @@ What we're going to be doing in a nutshell is animating the frame of the viewToS
 
 We do this by first defining a new frame that is slightly offset to the right of the defaultFrame.
 
-<div style = "width:700px">
+
 <pre><code>
 - (void)animateShake:(UIView *)viewToShake
     
@@ -165,7 +161,6 @@ We do this by first defining a new frame that is slightly offset to the right of
     
 }
 </code></pre>
-</div>
 
 shakeFrameRight has the same frame as the defaultFrame, except that the origin.x of the frame is increased by offset = 5.0. This means that a small part of our shakeFrameRight is going to be off screen to the right. 
 
