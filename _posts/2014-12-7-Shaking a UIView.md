@@ -58,8 +58,12 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 <div style="width:700px">
 <pre><code>
+
+
 @property (nonatomic) CGRect defaultFrame; 
+
 ------
+
 
 - (void)viewDidLoad 
 {
@@ -126,6 +130,11 @@ If you're not familiar with UIView animations, I would first suggest reading [th
 
 
 We're only going to worry about animating the frame of our view in this example. 
+The code above the 
+
+---------
+
+refers to the class extension.
 
 In viewDidLoad, 
 
