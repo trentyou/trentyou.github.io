@@ -57,7 +57,7 @@ What's happening in this demonstration is that when the user has the "Select a l
 **Now to the part of the post you've been reading for, here's my implementation:**
 
 <div style="width:700px">
-<code>
+<pre><code>
 	@property (nonatomic) CGRect defaultFrame; <br>
     ------<br>
     <br>
@@ -116,7 +116,7 @@ What's happening in this demonstration is that when the user has the "Select a l
 
 	}
 
-</code>
+</code></pre>
 </div>
 
 Sorry about the crappy formatting on the code segments, I'm still pretty bad at HTML haha. 
@@ -398,9 +398,3 @@ If any of the code isn't working for you, check with the first code snippet I po
 You can mess around with the offset, the duration and the repeatCount to get an animation that you like. There are a lot of ways to achieve a shake animation, this was the way that ended up working for me. 
 
 Thanks for reading!
-
-
-
-
-
-
