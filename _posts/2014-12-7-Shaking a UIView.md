@@ -233,7 +233,7 @@ To call this method, we want to type:
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
-    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
 	viewToShake.frame = shakeFrameRight; 
     
@@ -256,7 +256,7 @@ The first parameter of our method is the duration of length we want for our anim
 
 	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
-    CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
     
 	viewToShake.frame = shakeFrameRight; 
     
@@ -266,20 +266,29 @@ The first parameter of our method is the duration of length we want for our anim
 	}];
 }
 </code></pre>
+
 The next parameter is delay:, which is the length of time in seconds between when the method is called and when you want your animation to start. We're going to set this to 0.0 since we want the animation to start right when this method is called.
+<pre><code>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0;
+    float duration = 0.06;
 
-<div style = "width:700px">
-<code>
-float duration = 0.06; <br>
-<br>
-[UIView animateKeyframesWithDuration:duration delay:0.0 options: animations:^{
-} completion:^(BOOL finished)completion {
-}];
-</code>
-</div>
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	viewToShake.frame = shakeFrameRight; 
+    
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options: animations:^{
+	} completion:^(BOOL finished)completion {
+    
+	}];
+}
+</code></pre>
 <br>
 
-The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is quite extensive, but we only need two of them for this example: 
+The next parameter is options:, which is a number of options we can add to our animation. The [list](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/c/tdef/UIViewAnimationOptions) is pretty extensive, but we only need two of them for this example: 
 
 
 _UIViewKeyframeAnimationOptionRepeat and UIViewAnimationOptionCurveEaseInOut_
@@ -288,20 +297,29 @@ _UIViewKeyframeAnimationOptionRepeat and UIViewAnimationOptionCurveEaseInOut_
 
 - UIViewAnimationOptionCurveEaseInOut has an acceleration curve for the animation, meaning the animation begins slowly, then speeds up in the middle, then slows down again toward the end of the animation. We use it here to smooth out our shake animation.
 <br>
+<pre><code>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0;
+    float duration = 0.06;
 
-<div style = "width:700px">
-<code>
-float duration = 0.06; <br>
-<br>
-[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut UIView animations:^{
-} completion:^(BOOL finished)completion {
-}];
-</code>
-</div>
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	viewToShake.frame = shakeFrameRight; 
+    
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+	} completion:^(BOOL finished)completion {
+    
+	}];
+}
+</code></pre>
 
 The next parameter might look a little bit confusing. It expects a block, which is basically a block of code that we want to be executed by the animation method. The animations block syntax for this example is going to be: 
-
+<pre><code>
 ^{ //Your code here }
+</code></pre>
 
 Inside this block is where we're going to be doing all our animating. We're using the animateKeyFramesWithDuration animation method, which gives us the option of adding keyframes to the animation, which are frames within the animation that we specify. 
 
