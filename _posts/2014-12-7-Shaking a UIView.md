@@ -372,6 +372,7 @@ Finally, we're going to specify the repeat count of this overall animation, othe
 	viewToShake.frame = shakeFrameRight; 
     
     [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+    
 	[UIView setAnimationRepeatCount:repeatCount]; 
     
 	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
@@ -404,6 +405,7 @@ The final parameter in the addKeyFramesWithDuration method is another block. It 
 	viewToShake.frame = shakeFrameRight; 
     
     [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+    
 	[UIView setAnimationRepeatCount:repeatCount]; 
 
 	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
