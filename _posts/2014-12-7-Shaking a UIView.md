@@ -305,98 +305,111 @@ Inside this block is where we're going to be doing all our animating. We're usin
 
 The two frames we're going to be specifying are the shakeFrameRight and shakeFrameLeft that we defined earlier. Basically, the animation is going to be moving between the two frames. To specify a keyframe, we add it into the animation block:
 
-<div style = "width:700px">
-<code>
-animations:^{ <br>
-[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
-viewToShake.frame = shakeFrameLeft; <br>
-}]; <br>
+<pre><code>
+animations:^{ 
+	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
+}]; 
 }
-</code>
-</div>
+</code></pre>
 
-This is getting a little crazy, but inside our animation block, we have another method that takes an animation block as a parameter. Inside this nested animation block is where we specify our first animation. By typing:
+The first parameter: 
 
-<div style = "width:700px">
-<code>
-viewToShake.frame = shakeFrameLeft;
-</code>
-</div>
-
-We're telling UIView that we want to take the current frame of viewToShake (which has earlier been set to shakeFrameRight) and animate it to shakeFrameLeft. 
-
-The other parameter: 
-
-<div style = "width:700px">
-<code>
+<pre><code>
 	addKeyframeWithRelativeStartTime:0.0
-</code>
-</div>
+</code></pre>
 
 represents when during the total animation time you want this animation to start. 0.0 will mean this keyframe will start right after the animation method is called, while 0.5 means the keyframe will start halfway through the total animation time.
 
-<div style = "width:700px">
+This next parameter specifies how long of the total animation time this keyframe will spend. 0.5 means that half of the total animation time will be spent animating to this keyframe.
+
 <code>
 	relativeDuration:0.5
 </code>
 </div>
 
-This next parameter specifies how long of the total animation time this keyframe will spend. 0.5 means that half of the total animation time will be spent animating to this keyframe.
+This is getting a little crazy, but the next parameter takes another block. Inside this nested animation block is where we specify our first animation. By typing:
+
+
+<pre><code>
+viewToShake.frame = shakeFrameLeft;
+</code></pre>
+
+We're telling UIView that we want to take the current frame of viewToShake (which has earlier been set to shakeFrameRight) and animate it to shakeFrameLeft. 
+
 
 
 Now we're going to add our second keyframe, which is basically the same code as our first keyframe, except that we're animating to the right this time. 
 
+<pre><code>
+animations:^{ 
+	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
 
-<div style = "width:700px">
-<code>
-animations:^{ <br>
-[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
-viewToShake.frame = shakeFrameLeft; <br>
-<br>
-[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
-viewToShake.frame = shakeFrameLeft; <br>
+	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
 }]; 
 }
-</code>
-</div>
+</code></pre>
 
 Note the different RelativeStartTime for the second keyframe. It's going to be starting after the first keyframe ends. 
 
 Finally, we're going to specify the repeat count of this overall animation, otherwise it'll just repeat forever.
 
-<div style = "width:700px">
-<code>
-float repeatCount = 3.0;<br>
-<br>
----- <br>
-<br>
-animations:^{ <br>
-<br>
-[UIView setAnimationRepeatCount:repeatCount]; <br>
-<br>
+<pre><code>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0;
+	float duration = 0.06;
+    float repeatCount = 3.0;
 
-[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ <br>
-viewToShake.frame = shakeFrameLeft; <br>
-<br>
-[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ <br>
-viewToShake.frame = shakeFrameRight; <br>
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	viewToShake.frame = shakeFrameRight; 
+    
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+    	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
+
+	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
+}]; 
+	} completion:^(BOOL finished)completion {
+    
+	}];
 }
-}
-</code>
-</div>
+</code></pre>
 
 
 We're done with the animation block! 
 
 The final parameter in the addKeyFramesWithDuration method is another block. It asks what you want to do after the animation is complete. We're going to reset our viewToShake frame back to the defaultFrame.
 
-<div style = "width:700px">
-<code>
-      }completion:^(BOOL finished) { <br>
-          viewToShake.frame = self.defaultFrame; <br> 
-      }]; <br>
-</code>
-</div>
+- (void)animateShake:(UIView *)viewToShake
+{ 
+	float offset = 5.0;
+	float duration = 0.06;
+    float repeatCount = 3.0;
+
+	CGRect shakeFrameRight = CGRectMake(self.defaultFrame.origin.x + offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+	CGRect shakeFrameLeft = CGRectMake(self.defaultFrame.origin.x - offset, self.defaultFrame.origin.y, self.defaultFrame.size.width, self.defaultFrame.size.height);
+    
+	viewToShake.frame = shakeFrameRight; 
+    
+    [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+    	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
+
+	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
+viewToShake.frame = shakeFrameLeft; 
+}]; 
+	} completion:^(BOOL finished)completion {
+    	viewToShake.frame = self.defaultFrame;
+	}];
+}
+</code></pre>
+
 <br>
 <br>
 
