@@ -304,7 +304,6 @@ The next parameter might look a little bit confusing. It expects a block, which 
 <pre><code>
 ^{ //Your code here }
 </code></pre>
-
 Inside this block is where we're going to be doing all our animating. We're using the animateKeyFramesWithDuration animation method, which gives us the option of adding keyframes to the animation, which are frames within the animation that we specify. 
 
 The two frames we're going to be specifying are the shakeFrameRight and shakeFrameLeft that we defined earlier. Basically, the animation is going to be moving between the two frames. To specify a keyframe, we add it into the animation block:
