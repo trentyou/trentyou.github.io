@@ -371,19 +371,20 @@ Finally, we're going to specify the repeat count of this overall animation, othe
     
 	viewToShake.frame = shakeFrameRight; 
     
-    [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+	[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
     
-	[UIView setAnimationRepeatCount:repeatCount]; 
+		[UIView setAnimationRepeatCount:repeatCount]; 
     
-	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
-		viewToShake.frame = shakeFrameLeft; 
+		[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+			viewToShake.frame = shakeFrameLeft;
+		}];
 
-	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
-		viewToShake.frame = shakeFrameLeft; 
-	}]; 
+		[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
+			viewToShake.frame = shakeFrameLeft; 
+		}]; 
     
 	} completion:^(BOOL finished)completion {
-    
+    	
 	}];
 }
 </code></pre>
@@ -422,7 +423,6 @@ The final parameter in the addKeyFramesWithDuration method is another block. It 
 }
 </code></pre>
 
-<br>
 <br>
 You're done! Call the shakeAnimate: method from anywhere else in your app and pass it a view that you want to shake. Just remember that the method depends on the instance variable self.defaultFrame so remember to change that if you want to mess around with your own views. Or redesign the method to your own needs. This was just a quick and dirty demonstration. 
 
