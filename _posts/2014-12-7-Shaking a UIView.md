@@ -404,17 +404,17 @@ The final parameter in the addKeyFramesWithDuration method is another block. It 
     
 	viewToShake.frame = shakeFrameRight; 
     
-    [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
+	[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyFrameAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{
     
-	[UIView setAnimationRepeatCount:repeatCount]; 
+		[UIView setAnimationRepeatCount:repeatCount]; 
 
-	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
-		viewToShake.frame = shakeFrameLeft; 
-	}];
+		[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
+			viewToShake.frame = shakeFrameLeft; 
+		}];
     
-	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
-		viewToShake.frame = shakeFrameLeft; 
-	}]; 
+		[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
+			viewToShake.frame = shakeFrameLeft; 
+		}]; 
     
 	} completion:^(BOOL finished)completion {
     	viewToShake.frame = self.defaultFrame;
@@ -424,8 +424,6 @@ The final parameter in the addKeyFramesWithDuration method is another block. It 
 
 <br>
 <br>
-
-
 You're done! Call the shakeAnimate: method from anywhere else in your app and pass it a view that you want to shake. Just remember that the method depends on the instance variable self.defaultFrame so remember to change that if you want to mess around with your own views. Or redesign the method to your own needs. This was just a quick and dirty demonstration. 
 
 If any of the code isn't working for you, check with the first code snippet I posted that includes all the code I talked about. 
