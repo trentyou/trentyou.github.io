@@ -71,15 +71,14 @@ What's happening in this demonstration is that when the user has the "Select a l
         self.defaultFrame = CGRectMake(0.0f, midpoint, [UIScreen mainScreen].bounds.size.width, 325.0f);      
     
     	UIView *viewToShake = [[UIView alloc] initWithFrame:self.defaultFrame]; <br>
-        [self.view addSubview: viewToShake];
+        [self.view addSubview:viewToShake];
         
         [self animateShake:viewToShake];
 }
 
 - (void)animateShake:(UIView *)viewToShake
     
-{ 
-      
+{       
       float duration = 0.06; 
       float offset = 5.0; 
       float repeatCount = 3.0; 
@@ -92,6 +91,7 @@ What's happening in this demonstration is that when the user has the "Select a l
       [UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^{ 
   
           [UIView setAnimationRepeatCount:repeatCount]; 
+          
           [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
               viewToShake.frame = shakeFrameLeft;
           }]; 
@@ -202,9 +202,9 @@ Now that we have the two frames that we'll be animating between, let's dive into
               viewToShake.frame = shakeFrameRight; 
           }]; 
   
-      }completion:^(BOOL finished) { 
-          viewToShake.frame = self.defaultFrame; 
-      }]; 
+}completion:^(BOOL finished) { 
+	viewToShake.frame = self.defaultFrame; 
+}]; 
 }
 	
 </code></pre>
@@ -321,9 +321,9 @@ The first parameter:
 addKeyframeWithRelativeStartTime:0.0
 </code></pre>
 
-represents when during the total animation time you want this animation to start. 0.0 will mean this keyframe will start right after the animation method is called, while 0.5 means the keyframe will start halfway through the total animation time.
+represents when during the total animation time you want this animation to start. 0.0 will mean this keyframe will start right after the animation method is called, while 0.5 means the keyframe will start halfway through the total animation time (duration = 0.06 seconds, so half of 0.06 seconds will be 0.03 seconds).
 
-This next parameter specifies how long of the total animation time this keyframe will spend. 0.5 means that half of the total animation time will be spent animating to this keyframe.
+This next parameter specifies how long of the total animation time this keyframe will spend. A 0.5 relativeDuration means that half of the total animation time will be spent animating to this keyframe (0.03 seconds).
 <pre><code>
 relativeDuration:0.5
 </code></pre>
