@@ -318,7 +318,6 @@ animations:^{
 </code></pre>
 
 The first parameter: 
-
 <pre><code>
 addKeyframeWithRelativeStartTime:0.0
 </code></pre>
@@ -326,7 +325,6 @@ addKeyframeWithRelativeStartTime:0.0
 represents when during the total animation time you want this animation to start. 0.0 will mean this keyframe will start right after the animation method is called, while 0.5 means the keyframe will start halfway through the total animation time.
 
 This next parameter specifies how long of the total animation time this keyframe will spend. 0.5 means that half of the total animation time will be spent animating to this keyframe.
-
 <pre><code>
 relativeDuration:0.5
 </code></pre>
@@ -350,7 +348,7 @@ Now we're going to add our second keyframe, which is basically the same code as 
 animations:^{ 
 	[UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{ 
 		viewToShake.frame = shakeFrameLeft; 
-    }];
+	}];
 
 	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
 		viewToShake.frame = shakeFrameLeft; 
