@@ -211,6 +211,10 @@ Now that we have the two frames that we'll be animating between, let's dive into
 	
 </code></pre>
 
+
+
+
+<br>
 The UIView class contains the methods that animate views for you. The class method we're using is 
 
 <pre><code>
