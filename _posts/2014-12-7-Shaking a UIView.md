@@ -217,7 +217,7 @@ Now that we have the two frames that we'll be animating between, let's dive into
 <br>
 Now let's check out the details of the method above. First, the method documentation:
 
-The UIView class contains the methods that animate views for you. These are class methods. The specific class method we're using is: 
+The UIView class contains the methods that animate views for you. These are [(+) class methods](http://www.kobold2d.com/pages/viewpage.action?pageId=2654212). The specific class method we're using is: 
 
 <pre><code>
 +(void)animateKeyframesWithDuration:(NSTimeInterval)duration
