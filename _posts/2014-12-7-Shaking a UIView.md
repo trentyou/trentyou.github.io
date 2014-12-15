@@ -418,7 +418,7 @@ The final parameter in the addKeyFramesWithDuration method is another block. It 
 		}]; 
     
 	} completion:^(BOOL finished)completion {
-    	viewToShake.frame = self.defaultFrame;
+		viewToShake.frame = self.defaultFrame;
 	}];
 }
 </code></pre>
