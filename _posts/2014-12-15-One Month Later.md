@@ -23,7 +23,7 @@ Even though my app is mostly finished, I'm guessing it's going to be at least an
 
 
 
-What I've learned from programming this last month is that it's important to pick a project that's challenging enough to push you in directions to learn new things, but not too challenging that it would too hard to attempt for a beginner. If I end up finishing my current app, my next project is most likely going to be working with JSON data and the League of Legends api; I had an idea the last few days that I'm really excited to try out!
+One of the important things I've learned from programming this last month is that it's important to pick a project that's challenging enough to push you in directions to learn new things, but not too challenging that it would too hard to attempt for a beginner. If I end up finishing my current app, my next project is most likely going to be working with JSON data and the League of Legends api; I had an idea the last few days that I'm really excited to try out!
 
 
 
