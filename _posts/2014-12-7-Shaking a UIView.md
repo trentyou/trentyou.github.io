@@ -358,7 +358,7 @@ animations:^{
 	}];
 
 	[UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{ 
-		viewToShake.frame = shakeFrameLeft; 
+		viewToShake.frame = shakeFrameRight; 
 	}]; 
 }
 </code></pre>
