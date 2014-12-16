@@ -10,7 +10,7 @@ It's been a month since I've started working on my app, and a little more than t
 
 While I gained a broad knowledge of iOS development learning from the textbook in the first month, I really solidified that understanding by constantly practicing the concepts while working on my app in the past month.
 
-A month ago I wasn't even comfortable transitioning between view controllers. Passing data between view controllers was a huge challenge for me, one that often required going back to my textbook or looking for a solution on Stackoverflow. Now when I want to do the same thing? Easy, throw in a protocol declaration and implement the delegate methods. This might now take me maybe a few minutes to do when it used to take me hours of research and implementation just a month ago.
+A month ago I wasn't even comfortable transitioning between view controllers. Passing data between view controllers was an even bigger challenge for me, one that often required going back to my textbook or looking for a solution on Stackoverflow. Now when I want to do the same thing? Easy, throw in a protocol declaration and implement the delegate methods. This might now take me maybe a few minutes to do when it used to take me hours of research and implementation just a month ago.
 
 I've become really comfortable creating my own custom UIViews to insert into other views, and even more so with frame animations. It's really given me the confidence to try out UI tricks that I wouldn't have thought I could pull off in the past. 
 
