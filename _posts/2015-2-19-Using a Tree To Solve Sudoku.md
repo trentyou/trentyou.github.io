@@ -8,11 +8,11 @@ published: true
 
 In the last few weeks I've been working on rewriting my [sudoku solver](https://github.com/trentyou/Sudoku) in Objective-C and adding a GUI. Something else I've been working on is updating the guessing algorithm that runs after all the possible logical moves have been made.
 
-<br>
+
 <div style="text-align:center" markdown ="1">
 ![](/images/sudokubeforesolved.png)
 </div>
-<br>
+
 
 In my old guessing algorithm, it would pick a random number from one of the possible answers in an empty cell and repeat until it realizes it made an incorrect guess or the puzzle is solved. 
 
