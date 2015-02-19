@@ -14,7 +14,7 @@ In the last few weeks I've been working on rewriting my [sudoku solver](https://
 </div>
 
 
-In my old guessing algorithm, it would pick a random number from one of the possible answers in an empty cell and repeat until it realizes it made an incorrect guess or the puzzle is solved. 
+In my old guessing algorithm, it would pick a random number from one of the possible answers in an empty cell and repeat until it realizes it made an incorrect guess or the puzzle was solved. 
 
 While this algorithm worked, it could be really slow for some of the harder puzzles. The reason for this was that there was a huge number of possibilities for the correct answer in those puzzles, and my algorithm didn't keep track of the paths that were already guessed. Due to this, the algorithm would often repeat its guesses and waste a lot of time solving the harder puzzles. 
 
@@ -30,7 +30,7 @@ If the algorithm managed to reach the last empty cell at the bottom of the tree,
 </div>
 
 
-This algorithm _on average_ was much faster than my previous algorithm, because there was a limit to how long it could take to solve a puzzle. The old algorithm did not have a limit to the time to solve a puzzle, as the guess was random and could theoretically never make the correct guess, especially with so many possible answers. 
+This algorithm _on average_ is much faster than my previous algorithm, because there's a limit to how long it could take to solve a puzzle. The old algorithm did not have a limit to the time to solve a puzzle, as the guess was random and could theoretically never make the correct guess, especially with so many possible answers. 
 
 
 
