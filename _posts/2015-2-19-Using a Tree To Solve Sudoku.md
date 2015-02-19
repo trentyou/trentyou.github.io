@@ -24,11 +24,11 @@ If it encountered no possible answers for the next level in the tree (meaning an
 
 If the algorithm managed to reach the last empty cell at the bottom of the tree, the puzzle was solved. 
 
-<br>
+
 <div style="text-align:center" markdown ="1">
-![](/images/sudokusolving_post6.png)
+![](/images/sudokusolving_post6.gif)
 </div>
-<br>
+
 
 This algorithm _on average_ was much faster than my previous algorithm, because there was a limit to how long it could take to solve a puzzle. The old algorithm did not have a limit to the time to solve a puzzle, as the guess was random and could theoretically never make the correct guess, especially with so many possible answers. 
 
