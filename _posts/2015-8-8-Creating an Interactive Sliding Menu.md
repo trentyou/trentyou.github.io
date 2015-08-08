@@ -13,7 +13,7 @@ I've always wanted to learn how to create a custom menus that slides in from the
 <div style="text-align:center" markdown ="1">
 ![](/images/Kindle.png)
 </div>
-<div style="text-align:center"; font-size:0.9em>Something like this</div>
+<div style="text-align:center; font-size:0.9em">Something like this</div>
 
 I looked up some examples on github and a few tutorials, but none of them really had the requirements of what I was looking for. 
 
