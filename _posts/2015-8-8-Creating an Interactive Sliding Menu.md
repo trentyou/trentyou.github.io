@@ -22,25 +22,35 @@ Since I'm more experienced with views and animations now, I figured I would writ
 
 The first problem I tackled was finding a way to actually register a swipe that originated from the edge of the screen. Luckily, Apple has an API specifically for this gesture, called [UIScreenEdgePanGestureRecognizer](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIScreenEdgePanGestureRecognizer_class/index.html). This gesture recognizer detects panning that originates very close to the edge of the screen. This is probably what they use internally for gestures such as swiping up to open the Control Center. 
 
-My next requirement was to make the menu move with the movement of your gesture so that the menu would always be under your finger. This would require using the translation data found in the PanGesture super class. Inside of 
+My next requirement was to make the menu move with the movement of your gesture so that the menu would always be under your finger. This would require using the translation data found in the PanGesture super class. I created a method called handlePanGesture: that took the gesture and extracted the data on how far my finger has travelled. 
 <pre><code>
-(void)handlePanGesture:(UIPanGestureRecognizer *)gesture
+(void)handleEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)gesture
 {
     if (gesture.state == UIGestureRecognizerStateChanged) {
-        CGPoint center = gesture.view.center;
         CGPoint translation = [gesture translationInView:gesture.view];
         
-        CGPoint newCenter = CGPointMake(center.x + (translation.x * self.xTranslationMultiplier), center.y + (translation.y * self.yTranslationMultiplier));
-        gesture.view.center = newCenter;
+        CGFloat height = self.edgeMenu.view.frame.size.height;
+        CGFloat width = self.edgeMenu.view.frame.size.width + translation.x;
+        CGFloat x = self.edgeMenu.view.frame.origin.x;
+        CGFloat y = self.edgeMenu.view.frame.origin.y;
+        
+        CGRect newFrame = CGRectMake(x, y, width, height);
+        
+        self.edgeMenu.view.frame = newFrame;
         
         [gesture setTranslation:CGPointZero inView:gesture.view];
-    } else if (gesture.state == UIGestureRecognizerStateEnded) {
         
-        [UIView animateWithDuration:self.animationDuration delay:0.0 usingSpringWithDamping:self.springDampening initialSpringVelocity:self.initialSpringVelocity options:UIViewAnimationOptionAllowUserInteraction animations:^{
-            self.greySquare.frame = self.originalFrame;
-        } completion:^(BOOL finished) {
-            
-        }];
+        CGFloat alpha = (self.edgeMenu.view.frame.size.width / self.presentedFrame.size.width) * self.dimmingOverlayAlpha;
+        self.dimmingOverlay.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:alpha];
+
+        
+    } else if (gesture.state == UIGestureRecognizerStateEnded) {
+    
+        CGFloat widthRemaining = fabs(self.presentedFrame.size.width - self.edgeMenu.view.frame.size.width);
+        CGFloat duration = widthRemaining / self.presentedFrame.size.width;
+        
+        [self presentLeftEdgeMenuWithDuration:duration];
+
     }
 }
 </code></pre>
