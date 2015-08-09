@@ -64,7 +64,7 @@ In addition, wherever the user stops pulling the menu from, it will animate to t
 Here's the completed sliding side menu using pan gesture recognizers with the dimming feature and animations:
 
 <div style="text-align:center" markdown ="1">
-		![](/images/sideedgemenugif.gif)
+![](/images/sideedgemenugif.gif)
 </div>
 
 I still have the problem of the table view controller within the menu adapting to changes from changing the size of the menu, which may or may not be an intended effect. I personally don't like the effect very much so I might try changing the default size of the side menu. 
