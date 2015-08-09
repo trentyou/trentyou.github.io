@@ -10,7 +10,7 @@ published: true
 ![](/images/trentprofilepic.jpeg)
 </div>
 
-<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:426px; width:320px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg)">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:215; width:160px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg)">
 
 My name is Trent You and I'm a 24 year old iOS developer.
 
