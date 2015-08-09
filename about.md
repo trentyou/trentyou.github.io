@@ -7,7 +7,7 @@ published: true
 
 
 
-<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:426; width:320px; border-radius:250px">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:426; width:320px; border-radius:500px">
 
 
 My name is Trent You and I'm a 24 year old iOS developer.
