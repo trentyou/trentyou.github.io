@@ -9,7 +9,7 @@ published: true
 
 <img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:426; width:320px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); border-radius:250px">
 
-<div class="circular></div>
+<div class="circular" style="ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg)"></div>
 
 My name is Trent You and I'm a 24 year old iOS developer.
 
