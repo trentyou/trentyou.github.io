@@ -58,4 +58,8 @@ My next requirement was to make the menu move with the movement of your gesture 
 
 Inside this method I also added an invisible view that dims as the menu slides to the right. It uses the ratio of the current width of the menu to the full width of the menu to find how much to dim the view.
 
-In addition, wherever the user stops pulling the menu from, it will animate to the size of the full 
+In addition, wherever the user stops pulling the menu from, it will animate to the size of the full size of the side menu.
+
+<div style="text-align:center" markdown ="1">
+![](/images/sideedgemenugif.gif)
+</div>
