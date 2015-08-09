@@ -8,7 +8,7 @@ published: true
 
 12/4/2014
 
-Today I've been working on implementing drop shadows in my UITableViewCells. 
+Today I've been working on implementing drop shadows in my UITableViewCells. In my opinion, the sense of depth created by the shadows makes the cells look much better.
 
 <br>
 <br>
