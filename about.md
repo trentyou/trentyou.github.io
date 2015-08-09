@@ -6,7 +6,7 @@ published: true
 ---
 
 
-<div style="height:100px; width:100px" markdown="1"> 
+<div style="height:100px; width:100px; ms-transform: rotate(7deg); -webkit-transform: rotate(7deg); transform: rotate(7deg);" markdown="1"> 
 ![](/images/trentprofilepic.jpeg)
 </div>
 
