@@ -6,7 +6,7 @@ published: true
 ---
 
 
-![](/images/Kindle.png)
+![](/images/trentprofilepic.jpg)
 
 
 My name is Trent You and I'm a 24 year old iOS developer.
