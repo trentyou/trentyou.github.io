@@ -4,15 +4,16 @@ title: Using a Tree To Solve Sudoku
 published: true
 ---
 
+
 2/19/2015
 
-In the last few weeks I've been working on rewriting my [sudoku solver](https://github.com/trentyou/Sudoku) in Objective-C and adding a GUI. Something else I've been working on is updating the guessing algorithm that runs after all the possible logical moves have been made.
-
+In the last few weeks I've been working on rewriting my [sudoku solver](https://github.com/trentyou/Sudoku) in Objective-C and adding a GUI. 
 
 <div style="text-align:center" markdown ="1">
 ![](/images/sudokubeforesolved.png)
 </div>
 
+Something else I've been working on is updating the guessing algorithm that runs after all the possible logical moves have been made.
 
 In my old guessing algorithm, it would pick a random number from one of the possible answers in an empty cell and repeat until it realizes it made an incorrect guess or the puzzle was solved. 
 
@@ -33,4 +34,3 @@ If the algorithm managed to reach the last empty cell at the bottom of the tree,
 This algorithm _on average_ is much faster than my previous algorithm, because there's a limit to how long it could take to solve a puzzle. The old algorithm did not have a limit to the time to solve a puzzle, as the guess was random and could theoretically never make the correct guess, especially with so many possible answers. 
 
 [Rewritten Sudoku Solver in Objective-C](https://github.com/trentyou/SudokuSolver-iOS)
-
