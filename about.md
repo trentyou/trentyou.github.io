@@ -6,7 +6,7 @@ published: true
 ---
 
 
-<div style="height:100em; width:100em"> 
+<div style="height:100px; width:100px"> 
 ![](/images/trentprofilepic.jpeg)
 </div>
 
