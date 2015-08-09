@@ -10,6 +10,7 @@ published: true
 ![](/images/trentprofilepic.jpeg)
 </div>
 
+<img src="trentprofilepic.jpeg" style="200px; 200px">
 
 My name is Trent You and I'm a 24 year old iOS developer.
 
