@@ -6,8 +6,9 @@ published: true
 ---
 
 
-<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:215; width:160px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); border-radius:25px">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:426; width:320px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); border-radius:50px">
 
+<br>
 My name is Trent You and I'm a 24 year old iOS developer.
 
 I have a B.S. in Neurobiology, Physiology and Behavior from the University of California, Davis, although I am currently pursuing a second degree in Computer Science at the University of British Columbia. 
