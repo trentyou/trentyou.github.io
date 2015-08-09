@@ -63,6 +63,8 @@ In addition, wherever the user stops pulling the menu from, it will animate to t
 
 Here's the completed sliding side menu using pan gesture recognizers with the dimming feature and animations:
 
-<div style="text-align:center; border-style:solid; border-width:4px; border-color:black" markdown ="1">
-![](/images/sideedgemenugif.gif)
+<div style="text-align:center" markdown ="1">
+	<div style="border-style:solid; border-width:4px; border-color:black">
+		![](/images/sideedgemenugif.gif)
+    </div>
 </div>
