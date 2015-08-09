@@ -278,6 +278,15 @@ footer {
   text-align: center;
 }
 
+.circular {
+	height: 300px;
+    width: 300px;
+    border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://trentyou.github.io/images/trentprofilepic.jpeg) no-repeat;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";
