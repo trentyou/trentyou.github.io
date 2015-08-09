@@ -6,11 +6,7 @@ published: true
 ---
 
 
-<div style="text-align:left; height:200px; width:200px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); border-radius:25px" markdown="1"> 
-![](/images/trentprofilepic.jpeg)
-</div>
-
-<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:215; width:160px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg)">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:215; width:160px; ms-transform: rotate(90deg); -webkit-transform: rotate(90deg); transform: rotate(90deg); border-radius:25px">
 
 My name is Trent You and I'm a 24 year old iOS developer.
 
