@@ -7,8 +7,9 @@ published: true
 
 
 
-
-<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="text-align:center; height:200px; width:200px; border-radius:250px; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8)">
+<div style="text-align:center">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style= height:200px; width:200px; border-radius:250px; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8)">
+</div>
 
 
 My name is Trent You and I'm a 24 year old iOS developer.
