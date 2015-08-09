@@ -6,6 +6,7 @@ published: true
 
 
 
+
 8/8/2015
 
 I've always wanted to learn how to create a custom menus that slides in from the left or right hand side of the application. 
@@ -55,4 +56,6 @@ My next requirement was to make the menu move with the movement of your gesture 
 }
 </code></pre>
 
+Inside this method I also added an invisible view that dims as the menu slides to the right. It uses the ratio of the current width of the menu to the full width of the menu to find how much to dim the view.
 
+In addition, wherever the user stops pulling the menu from, it will animate to the size of the full 
