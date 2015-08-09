@@ -10,7 +10,7 @@ published: true
 ![](/images/trentprofilepic.jpeg)
 </div>
 
-<img src="http://github.com/trentyou/trentyou.github.io/blob/master/images/trentprofilepic.jpeg" style="height:200px; width:200px">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style="height:200px; width:200px">
 
 My name is Trent You and I'm a 24 year old iOS developer.
 
