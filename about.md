@@ -8,7 +8,7 @@ published: true
 
 
 <div style="text-align:center">
-<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style= height:200px; width:200px; border-radius:250px; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8)">
+<img src="http://trentyou.github.io/images/trentprofilepic.jpeg" style=" height:200px; width:200px; border-radius:250px; box-shadow: 0 0 8px rgba(0, 0, 0, .8); -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8)">
 </div>
 
 
