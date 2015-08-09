@@ -12,6 +12,8 @@ Today I've been working on implementing drop shadows in my UITableViewCells. In 
 
 <br>
 <br>
+<br>
+<br>
 <div>
 <div style="float:left; width:40%; height:40%" markdown="1">
 ![](/images/screenshotwithoutshadows_post3.png)
