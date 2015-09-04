@@ -16,7 +16,7 @@ published: true
       </a>
       <a href="https://itunes.apple.com/us/app/pocket-sudoku-solver/id991259276?mt=8">
 
-    	<span style="color:#707070; padding-left:300px">Multithreaded mobile Sudoku Solver app.</span>
+    	<span style="color:#707070; padding-left:300px">Pocket Sudoku Solver\n Multithreaded mobile Sudoku Solver app.</span>
     </a>
   </li>
 </ul>
