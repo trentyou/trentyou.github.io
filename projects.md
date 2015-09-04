@@ -14,6 +14,6 @@ published: true
       <a href="https://itunes.apple.com/us/app/pocket-sudoku-solver/id991259276?mt=8">
       <img src="http://trentyou.github.io/images/SudokuSolverIcon.png" style=" height:100px; width:100px; border-radius:20px; border-style:solid; border-width:1px; border-color:#D8D8D8; align:middle">
       </a>
-    <p style="color:#B0B0B0; padding-left: 10px">Multithreaded mobile Sudoku Solver app.</p>
+    <span style="color:#B0B0B0; padding-left: 10px">Multithreaded mobile Sudoku Solver app.</span>
   </li>
 </ul>
