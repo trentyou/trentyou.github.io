@@ -8,7 +8,7 @@ published: true
 
 
 
-<ul style="list-style:none">
+<ul style="list-style:none; margin:0; padding:0">
 
   <li>
     <div style="float:left">
