@@ -21,6 +21,6 @@ published: true
     </a>
     </div>
     
-    <p style="font-size:8">Pocket Sudoku Solver</p>
+    <p style="font-size:50%">Pocket Sudoku Solver</p>
   </li>
 </ul>
