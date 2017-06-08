@@ -13,6 +13,8 @@ Well, I'm doing it now, here in Summer 2017 because I'm back here again! Hopeful
 
 As a legal side note, these posts about my experiences at Amazon are solely my own opinions and do not express the views of the company.
 
-Let's start with the first day here in Vancouver:
+
+**Let's start with the first day here in Vancouver:**
+
 
 
