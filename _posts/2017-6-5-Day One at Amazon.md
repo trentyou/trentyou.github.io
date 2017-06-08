@@ -11,8 +11,9 @@ Last summer in 2016 I began an internship at Amazon Vancouver. I never got aroun
 
 Well, I'm doing it now, here in Summer 2017 because I'm back here again! Hopefully these experiences will help other people who are curious about an internship at Amazon. 
 
-As a legal side note, these posts about my experiences at Amazon are solely my own opinions and do not express the views of the company.
 
+
+_As a legal side note, these posts about my experiences at Amazon are solely my own opinions and do not express the views of the company._
 
 **Let's start with the first day here in Vancouver:**
 
