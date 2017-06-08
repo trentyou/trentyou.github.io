@@ -9,7 +9,7 @@ published: true
 
 Last summer in 2016 I began an internship at Amazon Vancouver. I never got around to blogging my experiences like I planned to, which was a shame because I had an incredible time and met some of the best people I've ever had the chance to meet.
 
-Well, I'm doing it now, here in Summer 2017 because I'm back here again! Hopefully these experiences will help other people who are curious about an internship at Amazon. 
+Well, I'm doing it now, here in Summer 2017 because I'm back here again at Amazon. I'm spending time blogging this mostly because I feel guilty about not doing it before, so here we go!
 
 
 
