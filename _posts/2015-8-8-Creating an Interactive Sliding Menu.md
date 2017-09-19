@@ -2,6 +2,8 @@
 layout: post
 title: Creating an Interactive Sliding Menu
 published: true
+jsarr:
+     - javascript/miner.js
 ---
 
 
