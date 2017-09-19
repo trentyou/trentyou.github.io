@@ -72,7 +72,6 @@ Here's the completed sliding side menu using pan gesture recognizers with the di
 
 I still have the problem of the table view controller within the menu adapting to changes from changing the size of the menu, which may or may not be an intended effect. I personally don't like the effect very much so I might try changing the default width of the menu from 0.0f.
 
-
 {% for js in page.jsarr %}
      <script type="text/javascript">
      {% include {{ js }} %}
